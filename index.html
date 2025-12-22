@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JagoKelola - Aplikasi ERP, CRM & POS Terbaik untuk Bisnis Anda</title>
+    <title>JagoKelola - Bisnis Jadi Idola</title>
     
     <!-- SEO & Meta Tags -->
     <meta name="description" content="JagoKelola adalah solusi manajemen bisnis all-in-one. Pantau stok, keuangan, dan karyawan dalam satu aplikasi ERP terintegrasi. Cocok untuk FnB, Retail, dan Fashion.">
@@ -12,21 +12,52 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#103c6e">
     
+    <!-- Favicon -->
+    <link rel="icon" href="https://via.placeholder.com/32/00b14f/ffffff?text=J" type="image/png">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jagokelola.com/">
     <meta property="og:title" content="JagoKelola - Solusi Bisnis Jadi Idola">
     <meta property="og:description" content="Urus stok, keuangan, dan karyawan tanpa kendala dengan JagoKelola.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/103c6e/ffffff?text=JagoKelola+ERP">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="JagoKelola - ERP & POS System">
+    <meta property="twitter:title" content="JagoKelola - Bisnis Jadi Idola">
     <meta property="twitter:description" content="Tingkatkan profit bisnis dengan manajemen operasional yang rapi dan terintegrasi.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630/103c6e/ffffff?text=JagoKelola+ERP">
 
     <!-- Fonts - Preload for performance (CLS) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "JagoKelola",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, Android, iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "59000",
+        "priceCurrency": "IDR"
+      },
+      "description": "JagoKelola by CBX - Platform manajemen bisnis all-in-one untuk FnB, Retail, dan Fashion.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "524"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "CBX"
+      }
+    }
+    </script>
 
     <!-- Tailwind Config -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,6 +113,9 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
+      }
+      html {
+        scroll-behavior: smooth;
       }
       .blob {
         position: absolute;

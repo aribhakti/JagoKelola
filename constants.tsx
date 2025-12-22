@@ -51,7 +51,6 @@ import {
   Globe,
   Smartphone
 } from 'lucide-react';
-import { PricingTier, PainPoint, Industry } from './types';
 
 // Icons mapping for the dynamic features component
 export const FEATURE_ICONS: Record<string, any> = {
@@ -109,66 +108,3 @@ export const FEATURE_ICONS: Record<string, any> = {
   reports: BarChart3,
   mobile: Smartphone
 };
-
-export const PAIN_POINTS: PainPoint[] = [
-  {
-    problem: "Stok Barang Sering Selisih?",
-    solution: "Sistem inventory JagoKelola melacak setiap barang keluar-masuk secara real-time, meminimalisir kecurangan dan kesalahan hitung.",
-    icon: AlertCircle
-  },
-  {
-    problem: "Laporan Keuangan Berantakan?",
-    solution: "Lupakan pembukuan manual. Dapatkan laporan Laba Rugi dan Neraca otomatis setiap kali ada transaksi.",
-    icon: TrendingUp
-  },
-  {
-    problem: "Sulit Pantau Karyawan?",
-    solution: "Fitur HRM dan Absensi membantu Anda memantau kinerja dan kehadiran karyawan dari mana saja.",
-    icon: ShieldCheck
-  }
-];
-
-export const INDUSTRIES: Industry[] = [
-  {
-    name: "Food & Beverage",
-    description: "Kafe, Restoran, Coffee Shop",
-    icon: Coffee
-  },
-  {
-    name: "Retail",
-    description: "Minimarket, Toko Kelontong, Toserba",
-    icon: ShoppingBag
-  },
-  {
-    name: "Fashion",
-    description: "Butik, Distro, Toko Pakaian",
-    icon: Shirt
-  }
-];
-
-export const PRICING: PricingTier[] = [
-  {
-    name: 'Basic',
-    price: 'Rp59.000',
-    unit: 'Per outlet/bulan',
-    description: 'Package that support basic business operations',
-    features: ['POS System', 'Basic Inventory', 'Laporan Penjualan', '1 User Admin'],
-    recommended: false,
-  },
-  {
-    name: 'Pro',
-    price: 'Rp199.000',
-    unit: 'Per outlet/bulan',
-    description: 'Package with complete features that support your business efficiency',
-    features: ['Full ERP Features', 'Akuntansi Otomatis', 'Manajemen Karyawan', 'Multi-Gudang', 'Priority Support'],
-    recommended: true,
-  },
-  {
-    name: 'Enterprise',
-    price: 'Rp599.000',
-    unit: 'Per outlet/bulan',
-    description: 'The leading package that supports your business to a higher level',
-    features: ['Unlimited Users', 'Custom Development', 'Dedicated Manager', 'API Access', 'On-premise Option'],
-    recommended: false,
-  },
-];

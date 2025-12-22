@@ -9,11 +9,13 @@ const ParticleBackground: React.FC = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: true }); // Optimize for alpha
     if (!ctx) return;
 
     let particles: Particle[] = [];
     let animationFrameId: number;
+    // Check if device is mobile to reduce load
+    const isMobile = window.innerWidth < 768;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -49,21 +51,22 @@ const ParticleBackground: React.FC = () => {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        // Subtle Mouse interaction
-        const dx = mouseX - this.x;
-        const dy = mouseY - this.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        const maxDistance = 100; // Smaller interaction radius
+        // Subtle Mouse interaction - Only on desktop to save performance
+        if (!isMobile) {
+          const dx = mouseX - this.x;
+          const dy = mouseY - this.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          const maxDistance = 100;
 
-        if (distance < maxDistance) {
-          const forceDirectionX = dx / distance;
-          const forceDirectionY = dy / distance;
-          const force = (maxDistance - distance) / maxDistance;
-          // Very subtle push
-          const directionX = forceDirectionX * force * 0.5;
-          const directionY = forceDirectionY * force * 0.5;
-          this.x -= directionX;
-          this.y -= directionY;
+          if (distance < maxDistance) {
+            const forceDirectionX = dx / distance;
+            const forceDirectionY = dy / distance;
+            const force = (maxDistance - distance) / maxDistance;
+            const directionX = forceDirectionX * force * 0.5;
+            const directionY = forceDirectionY * force * 0.5;
+            this.x -= directionX;
+            this.y -= directionY;
+          }
         }
 
         if (this.x > (canvas?.width || 0)) this.x = 0;
@@ -83,8 +86,11 @@ const ParticleBackground: React.FC = () => {
 
     function initParticles() {
       particles = [];
-      // Reduce number of particles drastically for "Calmer" feel
-      const numberOfParticles = Math.min((window.innerWidth * window.innerHeight) / 20000, 50);
+      // Reduce number of particles drastically for mobile performance
+      const density = isMobile ? 40000 : 20000; 
+      const maxParticles = isMobile ? 15 : 50; 
+      const numberOfParticles = Math.min((window.innerWidth * window.innerHeight) / density, maxParticles);
+      
       for (let i = 0; i < numberOfParticles; i++) {
         particles.push(new Particle());
       }
@@ -94,8 +100,10 @@ const ParticleBackground: React.FC = () => {
     let mouseY = 0;
 
     const handleMouseMove = (e: MouseEvent) => {
-      mouseX = e.x;
-      mouseY = e.y;
+      if (!isMobile) {
+        mouseX = e.x;
+        mouseY = e.y;
+      }
     };
 
     function animate() {
@@ -107,19 +115,23 @@ const ParticleBackground: React.FC = () => {
         particles[i].draw();
         
         // Connect particles very subtly
-        for (let j = i; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 80) {
-            ctx.beginPath();
-            // Lighter connection lines
-            ctx.strokeStyle = `rgba(16, 60, 110, ${0.05 - distance/2000})`; 
-            ctx.lineWidth = 0.3;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
+        // Reducing connection distance logic for performance
+        if (!isMobile) { 
+          for (let j = i; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            // Simplified distance check (square distance is faster than sqrt)
+            const distSq = dx * dx + dy * dy;
+            
+            if (distSq < 6400) { // 80 * 80
+              ctx.beginPath();
+              const distance = Math.sqrt(distSq);
+              ctx.strokeStyle = `rgba(16, 60, 110, ${0.05 - distance/2000})`; 
+              ctx.lineWidth = 0.3;
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
           }
         }
       }
@@ -127,7 +139,9 @@ const ParticleBackground: React.FC = () => {
     }
 
     window.addEventListener('resize', resizeCanvas);
-    window.addEventListener('mousemove', handleMouseMove);
+    if (!isMobile) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
     resizeCanvas();
     animate();
 
@@ -136,7 +150,7 @@ const ParticleBackground: React.FC = () => {
       window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [theme]); // Re-init when theme changes to update colors
+  }, [theme]);
 
   return (
     <canvas 

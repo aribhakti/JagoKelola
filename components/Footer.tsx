@@ -20,15 +20,18 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { 
       Icon: Instagram, 
-      href: 'https://www.instagram.com/cubix.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' 
+      href: 'https://www.instagram.com/cubix.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+      label: 'Instagram'
     },
     { 
       Icon: Linkedin, 
-      href: 'https://www.linkedin.com/company/cbx-branding/' 
+      href: 'https://www.linkedin.com/company/cbx-branding/',
+      label: 'LinkedIn'
     },
     { 
       Icon: Globe, 
-      href: 'https://cubix.co.id/' 
+      href: 'https://cubix.co.id/',
+      label: 'Website'
     }
   ];
 
@@ -49,14 +52,14 @@ const Footer: React.FC = () => {
                 Platform manajemen bisnis modern untuk membantu operasional bisnis Anda lebih efisien.
               </p>
               <div className="flex space-x-4">
-                {socialLinks.map(({ Icon, href }, idx) => (
+                {socialLinks.map(({ Icon, href, label }, idx) => (
                   <a 
                     key={idx}
                     href={href} 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-800/50 dark:bg-slate-800/50 p-2.5 rounded-full hover:bg-brand-green text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 group"
-                    aria-label="Social Link"
+                    aria-label={label}
                   >
                     <Icon size={18} className="group-hover:rotate-6 transition-transform" />
                   </a>

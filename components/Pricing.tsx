@@ -1,6 +1,5 @@
 import React from 'react';
 import { Check } from 'lucide-react';
-import { PRICING } from '../constants';
 import { useAppContext } from '../ThemeContext';
 
 const Pricing: React.FC = () => {
@@ -20,7 +19,7 @@ const Pricing: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PRICING.map((tier) => (
+          {t.pricing.tiers.map((tier: any) => (
             <div 
               key={tier.name}
               className={`relative bg-white dark:bg-slate-900 rounded-2xl shadow-sm p-8 border ${
@@ -47,7 +46,7 @@ const Pricing: React.FC = () => {
               </div>
 
               <ul className="space-y-4 mb-8 flex-1">
-                {tier.features.map((feature, idx) => (
+                {tier.features.map((feature: string, idx: number) => (
                   <li key={idx} className="flex items-center gap-3 text-gray-600 dark:text-gray-300">
                     <div className="bg-green-100 dark:bg-green-900/40 rounded-full p-1 text-brand-green dark:text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform">
                       <Check size={14} />
