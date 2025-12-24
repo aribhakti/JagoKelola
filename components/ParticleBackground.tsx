@@ -6,6 +6,10 @@ const ParticleBackground: React.FC = () => {
   const { theme } = useAppContext();
 
   useEffect(() => {
+    // Performance: Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -86,7 +90,7 @@ const ParticleBackground: React.FC = () => {
 
     function initParticles() {
       particles = [];
-      // Reduce number of particles drastically for mobile performance
+      // Performance: Reduce number of particles drastically for mobile
       const density = isMobile ? 40000 : 20000; 
       const maxParticles = isMobile ? 15 : 50; 
       const numberOfParticles = Math.min((window.innerWidth * window.innerHeight) / density, maxParticles);
@@ -114,8 +118,7 @@ const ParticleBackground: React.FC = () => {
         particles[i].update(mouseX, mouseY);
         particles[i].draw();
         
-        // Connect particles very subtly
-        // Reducing connection distance logic for performance
+        // Performance: Skip connection drawing on mobile completely to save CPU
         if (!isMobile) { 
           for (let j = i; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
@@ -155,7 +158,8 @@ const ParticleBackground: React.FC = () => {
   return (
     <canvas 
       ref={canvasRef} 
-      className="absolute top-0 left-0 w-full h-full pointer-events-none z-0"
+      className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 opacity-60"
+      style={{ willChange: 'transform' }}
     />
   );
 };

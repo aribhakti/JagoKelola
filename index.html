@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JagoKelola - Bisnis Jadi Idola</title>
+    <link rel="canonical" href="https://jagokelola.com/" />
+    
+    <!-- Performance Hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     
     <!-- SEO & Meta Tags -->
-    <meta name="description" content="JagoKelola adalah solusi manajemen bisnis all-in-one. Pantau stok, keuangan, dan karyawan dalam satu aplikasi ERP terintegrasi. Cocok untuk FnB, Retail, dan Fashion.">
-    <meta name="keywords" content="ERP Indonesia, Aplikasi Kasir, POS System, CRM, Manajemen Stok, JagoKelola, CBX, Software Akuntansi, HRM System">
+    <meta name="description" content="JagoKelola adalah software ERP, POS & CRM all-in-one. Atur stok, keuangan, dan karyawan tanpa kendala. Solusi bisnis idola untuk FnB, Retail, dan Fashion.">
+    <meta name="keywords" content="JagoKelola, Aplikasi Kasir, ERP Indonesia, POS System, CRM, Manajemen Stok, Software Akuntansi, HRM System, Aplikasi Bisnis">
     <meta name="author" content="CBX">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#103c6e">
@@ -18,9 +24,11 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jagokelola.com/">
-    <meta property="og:title" content="JagoKelola - Solusi Bisnis Jadi Idola">
-    <meta property="og:description" content="Urus stok, keuangan, dan karyawan tanpa kendala dengan JagoKelola.">
+    <meta property="og:title" content="JagoKelola - Bisnis Jadi Idola">
+    <meta property="og:description" content="Atur segala tanpa kendala. Sistem ERP & POS terintegrasi untuk profit bisnis yang menyala.">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/103c6e/ffffff?text=JagoKelola+ERP">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="JagoKelola">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -41,21 +49,27 @@
       "name": "JagoKelola",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web, Android, iOS",
+      "url": "https://jagokelola.com",
       "offers": {
         "@type": "Offer",
         "price": "59000",
-        "priceCurrency": "IDR"
+        "priceCurrency": "IDR",
+        "priceValidUntil": "2025-12-31"
       },
       "description": "JagoKelola by CBX - Platform manajemen bisnis all-in-one untuk FnB, Retail, dan Fashion.",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "ratingCount": "524"
+        "ratingCount": "524",
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "author": {
         "@type": "Organization",
-        "name": "CBX"
-      }
+        "name": "CBX",
+        "url": "https://cubix.co.id"
+      },
+      "featureList": "POS, ERP, CRM, Inventory Management, Payroll, Accounting"
     }
     </script>
 
@@ -123,6 +137,7 @@
         z-index: -1;
         opacity: 0.4;
         transition: all 0.5s ease;
+        will-change: transform; /* Performance Hint */
       }
 
       /* Dark Mode Scrollbar */
@@ -145,6 +160,7 @@
         opacity: 0;
         display: inline-block;
         animation: word-bounce-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        will-change: transform, opacity; /* Performance Hint */
       }
 
       @keyframes word-bounce-in {
@@ -160,10 +176,26 @@
 
       .wave-path {
         animation: wave-move 20s linear infinite;
+        will-change: transform; /* Performance Hint */
       }
       @keyframes wave-move {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
+      }
+      
+      /* Reduce motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+        .blob, .wave-path, .word-enter {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
       }
     </style>
   <script type="importmap">

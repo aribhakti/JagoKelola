@@ -2,7 +2,7 @@ import React from 'react';
 
 const Loading: React.FC = () => {
   return (
-    <div className="flex items-center justify-center py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div className="flex items-center justify-center py-20 min-h-[400px] bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="relative">
         <div className="w-12 h-12 rounded-full border-4 border-gray-200 dark:border-slate-700 opacity-50"></div>
         <div className="absolute top-0 left-0 w-12 h-12 rounded-full border-4 border-brand-green border-t-transparent animate-spin"></div>

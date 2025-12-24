@@ -7,18 +7,17 @@ import { useAppContext } from '../ThemeContext';
 const Hero: React.FC = () => {
   const { t } = useAppContext();
   
-  // Use translations for title words logic (simplified for demo to just use string)
-  // For proper word-by-word animation with translations, we'd need to split the translated string
+  // Use translations for title words logic
   const titleString = t.hero.title;
   const titleWords = titleString.split(' ');
 
   return (
     <div className="relative pt-32 pb-32 lg:pt-48 lg:pb-48 overflow-hidden bg-white dark:bg-slate-900 transition-colors duration-300">
-      {/* Dynamic Backgrounds */}
+      {/* Dynamic Backgrounds - Optimized */}
       <ParticleBackground />
       <WaveBackground />
 
-      {/* Background Blobs with Animation - Adjusted for Dark Mode */}
+      {/* Background Blobs with Animation */}
       <div className="blob bg-brand-green/20 dark:bg-brand-green/10 w-[500px] h-[500px] rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 animate-blob"></div>
       <div className="blob bg-blue-100/60 dark:bg-blue-900/20 w-[500px] h-[500px] rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 animate-blob" style={{ animationDelay: '2s' }}></div>
 
@@ -32,7 +31,11 @@ const Hero: React.FC = () => {
               <span className="font-semibold tracking-wide">{t.hero.badge}</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-brand-blue dark:text-white tracking-tight leading-[1.1]">
+            {/* SEO Friendly H1: aria-label ensures screen readers read the full sentence */}
+            <h1 
+              className="text-5xl lg:text-7xl font-bold text-brand-blue dark:text-white tracking-tight leading-[1.1]"
+              aria-label={titleString}
+            >
               {titleWords.map((word, index) => (
                 <span 
                   key={index} 
@@ -61,6 +64,7 @@ const Hero: React.FC = () => {
               <a 
                 href="https://erp.cubix.co.id/login"
                 className="group flex items-center justify-center gap-2 bg-gradient-to-r from-brand-green to-brand-darkGreen text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-brand-green/20 hover:shadow-brand-green/40 hover:-translate-y-1"
+                aria-label={t.hero.cta_primary}
               >
                 {t.hero.cta_primary}
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -70,6 +74,7 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-white border border-gray-200 dark:border-slate-600 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:border-brand-green hover:text-brand-green dark:hover:text-green-400 hover:shadow-lg"
+                aria-label={t.hero.cta_secondary}
               >
                 <MessageCircle size={20} className="text-brand-green dark:text-green-400" /> {t.hero.cta_secondary}
               </a>
