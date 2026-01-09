@@ -1,3 +1,4 @@
+
 export const translations = {
   id: {
     nav: {
@@ -11,32 +12,32 @@ export const translations = {
       badge: 'Solusi Usaha Tanpa Kendala',
       title: 'Bisnis Jadi Idola Bersama JagoKelola',
       headline: 'Atur Segala Tanpa Kendala',
-      subtext: 'Lupakan cara lama yang bikin pusing kepala. JagoKelola hadir untuk rapikan stok, uang, dan karyawan Anda agar profit terus menyala.',
+      subtext: 'Satu aplikasi untuk stok, uang, dan tim Anda. Lupakan cara lama yang bikin kepala pusing, beralih ke JagoKelola agar profit makin genting.',
       cta_primary: 'Coba Gratis Sekarang',
-      cta_secondary: 'Hubungi Tim Sales',
+      cta_secondary: 'Lihat Demo JagoKelola',
       stats_revenue: 'Pendapatan Hari Ini'
     },
     trusted: {
-      label: 'Dipercaya oleh bisnis modern di seluruh Indonesia'
+      label: 'Dipercaya oleh bisnis yang ingin naik kelas di seluruh Indonesia'
     },
     howItWorks: {
       subtitle: 'Proses Integrasi',
       title: 'Mudah Dimula, Tanpa Jeda',
-      desc: 'Sistem yang dirancang sederhana agar siapa saja bisa langsung bisa.',
+      desc: 'Sistem dirancang sederhana, bahkan untuk tim yang gaptek teknologi sekalipun.',
       steps: [
-        { title: 'Daftar Segera', desc: 'Registrasi kilat, langsung dapat akses cepat.' },
-        { title: 'Input Data', desc: 'Masukkan stok dan harga tanpa perlu pusing kepala.' },
-        { title: 'Langsung Kelola', desc: 'Sistem aktif seketika, bisnis siap jadi idola.' }
+        { title: 'Daftar Segera', desc: 'Registrasi kilat, langsung aktif tanpa syarat berat.' },
+        { title: 'Input Data', desc: 'Masukkan stok dan harga, template tersedia agar tidak pusing kepala.' },
+        { title: 'Langsung Kelola', desc: 'Sistem jalan seketika, operasional bisnis tertata rapi jali.' }
       ]
     },
     cookie: {
-      text: 'Kami menggunakan cookie untuk meningkatkan pengalaman pengguna Anda di website ini.',
+      text: 'Kami menggunakan cookie agar pengalaman Anda di JagoKelola makin mempesona.',
       accept: 'Saya Setuju'
     },
     integrations: {
       subtitle: 'Konektivitas',
-      title: 'Terhubung dengan Ekosistem Digital',
-      desc: 'Sinkronisasi otomatis dengan berbagai platform untuk efisiensi maksimal.',
+      title: 'Terhubung Ekosistem, Bisnis Makin Kalem',
+      desc: 'Sinkronisasi otomatis dengan marketplace dan pembayaran. Santai saja, biar sistem yang bekerja.',
       marketplace: 'Marketplace',
       payment: 'Pembayaran Digital',
       logistics: 'Logistik & Kurir',
@@ -56,236 +57,226 @@ export const translations = {
       ]
     },
     download: {
-      title: 'Kontrol Bisnis dari Mana Saja',
-      desc: 'Pantau performa outlet, cek laporan penjualan, dan kelola persetujuan karyawan langsung dari smartphone Anda.',
+      title: 'Kontrol Bisnis Dari Mana Saja',
+      desc: 'Pantau omzet cabang, cek stok menipis, hingga approve cuti karyawan. Semua dalam genggaman, hati pun tenang.',
       google: 'Google Play',
       apple: 'App Store'
     },
     pain: {
-      subtitle: 'Tantangan Bisnis',
-      title: 'Sering Jumpa Kendala?',
-      desc: 'Masalah operasional harian jangan sampai membuat bisnis Anda gagal jadi juara.',
+      subtitle: 'Masalah UMKM',
+      title: 'Kerja Keras Tapi Hasil Pas-Pasan?',
+      desc: 'Jangan biarkan masalah operasional menggerogoti profit Anda. Kenali tanda-tanda bisnis butuh JagoKelola.',
       solution_label: 'Solusi JagoKelola:',
       items: [
         {
           id: 'stock',
-          title: "Stok Barang Tidak Terjaga",
-          desc: "Barang sering hilang entah kemana, selisih stok bikin untung sirna seketika."
+          title: "Stok Selisih & Hilang",
+          desc: "Barang sering raib tanpa jejak? Selisih stok bikin profit bocor dan kepala retak."
         },
         {
           id: 'finance',
           title: "Keuangan Tak Terbaca",
-          desc: "Arus kas tidak nyata, keputusan bisnis jadi tanda tanya besar tanpa data."
+          desc: "Untung atau rugi cuma pakai feeling? Arus kas berantakan bikin bisnis pusing keliling."
         },
         {
           id: 'staff',
-          title: "Tim Sulit Dikelola",
-          desc: "Susah pantau kinerja karyawan saat Anda tidak ada, produktivitas pun tiada."
+          title: "Owner Terikat Tempat",
+          desc: "Bisnis macet saat Anda tidak ada? Karyawan sulit dipantau, produktivitas pun tiada."
         }
       ]
     },
     features: {
       subtitle: 'Fitur Unggulan',
-      title: 'Fitur Lengkap, Bisnis Menyala',
-      desc: 'Satu aplikasi untuk segala kebutuhan usaha. Dari kasir depan hingga laporan di meja, semua tersedia.',
+      title: 'Satu Sistem, Semua Operasional',
+      desc: 'Tidak perlu banyak aplikasi terpisah. JagoKelola menyatukan kasir, gudang, hingga laporan dalam satu wadah.',
       categories: [
         {
           id: 'pos_inventory',
-          label: 'POS & Inventory',
+          label: 'Kasir & Stok',
           items: [
-            { id: 'fast_checkout', title: 'Kasir Idola', desc: 'Transaksi cepat anti macet dengan scan barcode dan struk digital.' },
-            { id: 'multi_warehouse', title: 'Gudang Terkelola', desc: 'Kontrol stok di banyak lokasi gudang dan cabang toko tanpa jeda.' },
-            { id: 'supplier', title: 'Belanja Terjaga', desc: 'Otomatisasi PO ke supplier dan pencatatan utang usaha yang rapi.' },
-            { id: 'table_management', title: 'Pesanan Tertata', desc: 'Kelola pesanan pelanggan dan pengiriman barang dengan seksama.' }
+            { id: 'fast_checkout', title: 'Kasir Anti Lelet', desc: 'Scan barcode cepat, antrian pelanggan tidak sampai berkarat.' },
+            { id: 'multi_warehouse', title: 'Multi Gudang & Cabang', desc: 'Pantau stok beda lokasi dari satu HP. Transfer barang tanpa emosi.' },
+            { id: 'stock_opname', title: 'Opname Tanpa Drama', desc: 'Sesuaikan stok fisik dan sistem dengan mudah, akurat, dan seksama.' },
+            { id: 'offline_mode', title: 'Internet Mati? Aman', desc: 'JagoKelola tetap beraksi meski sinyal pergi. Data sinkron saat online lagi.' }
           ]
         },
         {
           id: 'finance',
-          label: 'Keuangan & Akuntansi',
+          label: 'Keuangan',
           items: [
-            { id: 'auto_journal', title: 'Jurnal Otomatis', desc: 'Setiap transaksi langsung tercatat di pembukuan tanpa input ulang.' },
-            { id: 'invoice', title: 'Tagihan Lancar', desc: 'Kirim invoice profesional ke klien, pembayaran jadi lebih mudah.' },
-            { id: 'budget', title: 'Budget Terjaga', desc: 'Kontrol biaya operasional agar tidak bocor kemana-mana.' },
-            { id: 'realtime_pnl', title: 'Laba Terbaca', desc: 'Laporan Laba Rugi dan Neraca siap saji kapan saja Anda minta.' }
-          ]
-        },
-        {
-          id: 'hrm',
-          label: 'SDM & Payroll',
-          items: [
-            { id: 'attendance', title: 'Absensi Akurat', desc: 'Pantau kehadiran tim dengan GPS, tidak bisa titip absen lagi.' },
-            { id: 'payroll', title: 'Gaji Tanpa Drama', desc: 'Hitung gaji, lembur, dan bonus secara otomatis dan tepat waktu.' },
-            { id: 'leave', title: 'Cuti Terdata', desc: 'Pengajuan cuti karyawan terintegrasi, mudah disetujui atau ditunda.' },
-            { id: 'recruitment', title: 'Data Personalia', desc: 'Simpan data karyawan dan kontrak kerja dengan aman sentosa.' }
+            { id: 'auto_journal', title: 'Jurnal Otomatis', desc: 'Transaksi kasir langsung jadi jurnal. Tidak perlu jago akuntansi pun bisa handal.' },
+            { id: 'realtime_pnl', title: 'Laba Rugi Nyata', desc: 'Lihat profit detik ini juga. Bukan nunggu akhir bulan yang penuh tanda tanya.' },
+            { id: 'cash_flow', title: 'Arus Kas Terjaga', desc: 'Pantau uang masuk dan keluar agar cash flow bisnis selalu sehat sentosa.' },
+            { id: 'invoice', title: 'Tagihan Rapi', desc: 'Kirim invoice ke klien dan pantau piutang jatuh tempo dengan teliti.' }
           ]
         },
         {
           id: 'crm',
-          label: 'CRM & Pelanggan',
+          label: 'Pelanggan & Promo',
           items: [
-            { id: 'leads', title: 'Prospek Terbina', desc: 'Pantau calon pelanggan potensial agar tidak pindah ke tetangga.' },
-            { id: 'contract', title: 'Database Pelanggan', desc: 'Simpan riwayat belanja untuk pelayanan yang lebih mempesona.' },
-            { id: 'messenger', title: 'Loyalti Terjaga', desc: 'Berikan poin dan diskon khusus agar pelanggan makin setia.' },
-            { id: 'customer_db', title: 'Analisa Warga', desc: 'Pahami perilaku belanja pelanggan untuk strategi yang mengena.' }
+            { id: 'contract', title: 'Database Pelanggan', desc: 'Simpan riwayat belanja mereka agar pelayanan makin mempesona.' },
+            { id: 'messenger', title: 'Promo Tepat Sasaran', desc: 'Kirim broadcast promo ke pelanggan setia, omzet naik seketika.' },
+            { id: 'leads', title: 'Loyalti Terjaga', desc: 'Sistem poin dan member bikin pelanggan balik lagi tanpa dipaksa.' },
+            { id: 'customer_db', title: 'Analisa Warga', desc: 'Pahami produk favorit pelanggan untuk strategi stok yang berguna.' }
           ]
         },
         {
-          id: 'project',
-          label: 'Manajemen Proyek',
+          id: 'hrm',
+          label: 'Karyawan',
           items: [
-            { id: 'project_mgmt', title: 'Proyek Terpantau', desc: 'Jaga timeline dan budget proyek agar selesai sesuai rencana.' },
-            { id: 'tasks', title: 'Tugas Merata', desc: 'Bagi tugas ke tim dengan adil dan transparan lewat Kanban.' },
-            { id: 'timesheet', title: 'Waktu Berharga', desc: 'Catat jam kerja tim untuk perhitungan biaya yang sebenarnya.' },
-            { id: 'bug_tracker', title: 'Kerja Bersama', desc: 'Kolaborasi tim dalam satu wadah, diskusi jadi lebih bermakna.' }
-          ]
-        },
-        {
-          id: 'support',
-          label: 'Alat & Dukungan',
-          items: [
-            { id: 'zoom', title: 'Video Sapa', desc: 'Meeting online langsung dari aplikasi untuk koordinasi segara.' },
-            { id: 'settings', title: 'Akses Terjaga', desc: 'Atur hak akses setiap staf demi keamanan data usaha.' },
-            { id: 'reports', title: 'Laporan Lengkap', desc: 'Ratusan template laporan siap pakai untuk analisa mendalam.' },
-            { id: 'mobile', title: 'Notifikasi Segera', desc: 'Dapat kabar via WA jika ada aktivitas penting yang terjadi.' }
+            { id: 'attendance', title: 'Absensi GPS', desc: 'Pantau kehadiran tim akurat, tidak bisa titip absen walau nekat.' },
+            { id: 'payroll', title: 'Gaji Otomatis', desc: 'Hitung gaji, komisi, dan lembur otomatis. Akhir bulan owner tetap manis.' },
+            { id: 'settings', title: 'Hak Akses User', desc: 'Batasi menu kasir dan admin. Data sensitif owner tetap terjamin.' },
+            { id: 'performance', title: 'Pantau Kinerja', desc: 'Lihat siapa kasir paling rajin dan siapa yang butuh dibina.' }
           ]
         }
       ]
     },
     dashboard: {
-      title_1: 'Pantau Berkala,',
-      title_2: 'Data Terkelola.',
-      desc: 'Semua data tampil di depan mata. Ambil keputusan bisnis strategis tanpa perlu meraba-raba kondisi usaha.',
+      title_1: 'Owner Fokus Tumbuh,',
+      title_2: 'Sistem Yang Bekerja.',
+      desc: 'Berhenti terjebak operasional harian. Lihat dashboard JagoKelola, ambil keputusan bisnis dengan data, bukan perasaan.',
       features: [
-        'Laporan Laba Rugi Nyata',
-        'Performa Cabang Terbaca',
-        'Stok Menipis Ada Kabarnya',
-        'Tren Penjualan Terdata'
+        'Laporan Laba Rugi Real-Time',
+        'Stok Kritis Ada Notifikasinya',
+        'Performa Cabang Terbaca Jelas',
+        'Cegah Kebocoran Kas & Stok'
       ],
-      cta: 'Lihat Demo Idola',
-      active_badge: 'Sistem Menyala',
-      uptime: 'Uptime 99.9%'
+      cta: 'Lihat Demo JagoKelola',
+      active_badge: 'Bisnis Terkendali',
+      uptime: 'Cloud Aman 99.9%'
     },
     industries: {
       subtitle: 'Sektor Bisnis',
-      title: 'Cocok Untuk Segala Usaha',
-      desc: 'Apapun jenis bisnisnya, JagoKelola siap membuatnya makin berjaya.',
+      title: 'Apapun Usahanya, JagoKelola Solusinya',
+      desc: 'Sistem fleksibel yang mengerti pola kerja lapangan UMKM di Indonesia.',
       items: [
         {
           id: 'fnb',
           name: "Food & Beverage",
-          description: "Cafe, Restoran, Warung Kopi, Franchise"
+          description: "Cafe, Restoran, Franchise. Kelola resep & bahan baku."
         },
         {
           id: 'retail',
           name: "Retail & Grosir",
-          description: "Minimarket, Toko Kelontong, Toserba"
+          description: "Minimarket, Toserba. Transaksi cepat, stok ribuan SKU aman."
         },
         {
           id: 'fashion',
           name: "Fashion & Lifestyle",
-          description: "Butik, Distro, Toko Aksesoris"
+          description: "Butik, Distro. Kelola varian warna & ukuran tanpa pusing."
+        },
+        {
+          id: 'distributor',
+          name: "Distributor & B2B",
+          description: "Grosir besar. Atur pesanan, piutang, dan sales keliling."
+        },
+        {
+          id: 'services',
+          name: "Jasa & Proyek",
+          description: "Agency, Bengkel, Salon. Pantau progress dan profit proyek."
         }
       ]
     },
     testimonials: {
-      subtitle: "Testimoni",
-      title: "Kata Mereka yang Sudah Percaya",
-      desc: "Lihat bagaimana JagoKelola membuat bisnis mereka makin gaya.",
+      subtitle: "Kata Pengguna",
+      title: "Bisnis Rapi, Owner Happy",
+      desc: "Mereka sudah membuktikan. Dari yang tadinya berantakan, kini jadi bisnis idola.",
       items: [
         {
           name: "Budi Santoso",
           role: "Owner, Kopi Kenangan Hati",
-          quote: "Stok biji kopi di 5 cabang terpantau tanpa jeda. Selisih stok sirna, profit naik seketika.",
+          quote: "Dulu stok kopi di 5 cabang sering selisih. Pakai JagoKelola, semua terpantau dari HP. Selisih hilang, profit datang.",
           image: "https://randomuser.me/api/portraits/men/32.jpg"
         },
         {
           name: "Siti Aminah",
           role: "Manager, Butik Muslimah",
-          quote: "Fitur kasirnya idola banget. Karyawan baru langsung bisa. Laporan penjualan juga sangat terbuka.",
+          quote: "Tim saya gaptek, tapi pakai JagoKelola langsung bisa. Tampilannya sederhana banget, kasir baru 10 menit langsung jalan.",
           image: "https://randomuser.me/api/portraits/women/44.jpg"
         },
         {
           name: "Hendrawan",
-          role: "CEO, Retail Maju Jaya",
-          quote: "Dulu pusing urus gaji, sekarang otomatis semua. JagoKelola beneran solusi yang tiada duanya.",
+          role: "Distributor Sembako Jaya",
+          quote: "Urus piutang pelanggan dulu pusing catat di buku. Sekarang ada remindernya otomatis. Cash flow jadi lancar jaya.",
           image: "https://randomuser.me/api/portraits/men/86.jpg"
         }
       ]
     },
     faq: {
-      subtitle: "Bantuan",
-      title: "Tanya Jawab",
-      desc: "Jawaban atas hal-hal yang sering ditanyakan para calon mitra.",
+      subtitle: "Keraguan Anda",
+      title: "Tanya Jawab (Objection Handling)",
+      desc: "Masih ragu beralih ke sistem? Simak jawaban untuk kegalauan Anda.",
       items: [
         {
-          question: "Apakah bisa dipakai saat internet tiada?",
-          answer: "Bisa banget. JagoKelola punya fitur Offline Mode. Transaksi tetap jalan, nanti data sinkron sendiri saat internet menyala kembali."
+          question: "Saya sudah nyaman pakai Excel/Buku, kenapa harus pindah?",
+          answer: "Excel bagus buat mencatat, tapi JagoKelola buat mengendalikan. Excel tidak real-time, tidak potong stok otomatis, dan rawan salah rumus. JagoKelola bikin Anda tahu profit hari ini juga."
         },
         {
-          question: "Perangkat apa yang harus ada?",
-          answer: "Apa saja bisa. Laptop, PC, atau Tablet Android paling kami rekomendasikan agar kasir makin gaya."
+          question: "Tim saya gaptek, nanti malah ribet?",
+          answer: "Justru JagoKelola dibuat untuk yang bukan orang IT. Tampilannya seperti aplikasi sehari-hari. Kasir cukup scan dan klik, tidak perlu paham akuntansi."
         },
         {
-          question: "Ada biaya tambahan yang tak terduga?",
-          answer: "Tidak ada. Harga kami transparan. Kecuali Anda butuh fitur khusus Enterprise, itu ada hitungannya."
+          question: "Kalau internet mati gimana? Bisnis berhenti?",
+          answer: "Tenang saja. JagoKelola punya fitur Offline Mode. Transaksi tetap jalan lancar, nanti data sinkron otomatis saat internet nyala lagi. JagoKelola tetap beraksi!"
         },
         {
-          question: "Support printer dan scanner apa saja?",
-          answer: "Hampir semua printer bluetooth/USB dan scanner barcode di pasaran cocok dengan sistem kami."
+          question: "Takut ribet pindahin data stok lama?",
+          answer: "Kami sediakan template Excel untuk import massal. Anda bisa mulai transaksi hari ini, data lama bisa menyusul sambil jalan. Yang penting bisnis rapi dulu."
         },
         {
-          question: "Cabang saya banyak, apakah bisa?",
-          answer: "Tentu bisa. Tambah cabang sepuasnya, kelola dalam satu dashboard saja. Transfer stok antar cabang juga mudah."
+          question: "Apakah ada biaya tersembunyi?",
+          answer: "Harga kami transparan per outlet/bulan. Tidak ada biaya setup wajib atau biaya 'kaget' di belakang. Semua fitur inti sudah termasuk."
         },
         {
-          question: "Data saya aman atau tidak?",
-          answer: "Sangat aman. Enkripsi setara bank menjaga data Anda. Backup otomatis juga selalu tersedia."
+          question: "Data saya aman nggak?",
+          answer: "Jauh lebih aman daripada di buku yang bisa hilang atau basah. Data dienkripsi di cloud server standar internasional dan di-backup otomatis."
         }
       ]
     },
     pricing: {
-      subtitle: 'Paket Berlangganan',
-      title: 'Harga Idola, Fitur Tiada Tara',
-      desc: 'Biaya ringan untuk manfaat ganda. Pilih paket yang pas dengan fase usaha Anda.',
-      popular: 'Paling Disuka',
-      select: 'Pilih Segera',
+      subtitle: 'Investasi Cerdas',
+      title: 'Harga Masuk Akal, Profit Maksimal',
+      desc: 'Pilih paket sesuai fase bisnis Anda. Upgrade kapan saja saat usaha makin membara.',
+      popular: 'Paling Laris',
+      select: 'Pilih Paket Ini',
       month: 'per outlet / bulan',
       tiers: [
         {
           name: 'Starter',
           price: 'Rp59.000',
-          description: 'Fitur dasar untuk usaha pemula.',
-          features: ['Aplikasi Kasir (POS)', 'Stok Dasar', 'Laporan Penjualan', '1 Admin Saja'],
+          description: 'Untuk usaha rintisan yang ingin mulai rapi.',
+          features: ['Aplikasi Kasir (POS)', 'Stok Dasar', 'Laporan Penjualan', '1 Admin User'],
           recommended: false,
         },
         {
           name: 'Professional',
           price: 'Rp199.000',
-          description: 'Lengkap untuk bisnis yang sedang membara.',
-          features: ['Full ERP & Akuntansi', 'Kelola Karyawan (HR)', 'Multi-Gudang', 'CRM Pelanggan', 'Support Utama'],
+          description: 'Lengkap untuk bisnis yang sedang scale-up.',
+          features: ['Full ERP & Akuntansi', 'Absensi & Gaji (HR)', 'Multi-Gudang', 'CRM Pelanggan', 'Support Prioritas'],
           recommended: true,
         },
         {
           name: 'Enterprise',
           price: 'Rp599.000',
-          description: 'Skala besar dengan kebutuhan tak terhingga.',
+          description: 'Skala besar dengan kebutuhan kompleks.',
           features: ['Unlimited User', 'Kustomisasi Fitur', 'Manager Khusus', 'Akses API', 'Server Pribadi'],
           recommended: false,
         },
       ]
     },
     consultation: {
-      title: 'Siap Jadi Bisnis Idola?',
-      desc: 'Diskusikan kendala Anda. JagoKelola siap bantu atur strategi agar usaha makin jaya.',
-      cta_wa: 'Chat WhatsApp Kami',
-      cta_trial: 'Coba Gratis Saja',
+      title: 'Jangan Kelola Bisnis Sendirian',
+      desc: 'JagoKelola bantu rapikan, kendalikan, dan menumbuhkan usaha Anda. Diskusikan kebutuhan Anda sekarang.',
+      cta_wa: 'Chat Tim Sales',
+      cta_trial: 'Coba Gratis Dulu',
       form: {
-        name: 'Nama Anda',
-        email: 'Email Kerja',
-        subject: 'Kebutuhan',
+        name: 'Nama Lengkap',
+        email: 'Email Bisnis',
+        subject: 'Jenis Usaha',
         message: 'Ceritakan kendala bisnis Anda...',
-        submit: 'Kirim Berita',
-        success: 'Pesan diterima. Tim kami akan segera menyapa Anda.'
+        submit: 'Kirim Pesan',
+        success: 'Pesan diterima. Tim kami akan segera membantu Anda.'
       }
     },
     footer: {
@@ -293,13 +284,13 @@ export const translations = {
       company: 'Perusahaan',
       contact: 'Kontak',
       careers: 'Karir',
-      blog: 'Blog & Berita',
+      blog: 'Blog & Tips',
       terms: 'Syarat & Ketentuan',
       privacy: 'Kebijakan Privasi',
-      copyright: '© 2025 JagoKelola by CBX. Hak Cipta Terjaga.'
+      copyright: '© 2025 JagoKelola by CBX. Bisnis Rapi, Profit Pasti.'
     },
     whatsapp: {
-      label: 'Chat Sales',
+      label: 'Konsultasi Gratis',
     },
     careers_modal: {
       title: 'Karir di CBX',
@@ -309,45 +300,45 @@ export const translations = {
           title: 'Fullstack Engineer',
           type: 'Full Time',
           location: 'Jakarta / Remote',
-          desc: 'Bergabung dengan tim engineering untuk membangun platform ERP kelas dunia.',
+          desc: 'Bergabung dengan tim engineering untuk membangun platform ERP kebanggaan Indonesia.',
           requirements: ['Jago React & Node.js', 'Paham Cloud', 'Pengalaman 3 tahun', 'Suka tantangan']
         },
         {
-          title: 'Customer Success',
+          title: 'Sales Executive',
           type: 'Full Time',
           location: 'Jakarta Selatan',
-          desc: 'Membantu klien memaksimalkan penggunaan JagoKelola.',
-          requirements: ['Komunikasi enak', 'Sabar melayani', 'Cepat belajar', 'Fokus pelanggan']
+          desc: 'Bantu UMKM Indonesia naik kelas dengan solusi JagoKelola.',
+          requirements: ['Komunikasi enak', 'Target oriented', 'Punya kendaraan', 'Semangat tinggi']
         }
       ]
     },
     blog_modal: {
       title: 'Wawasan Usaha',
-      subtitle: 'Artikel & Berita',
+      subtitle: 'Artikel & Tips',
       posts: [
         {
-          title: 'ERP Bikin Operasional Makin Gaya',
+          title: 'Tanda Bisnis Anda Bocor Halus',
           date: '12 Okt 2023',
           readTime: '5 min baca',
-          excerpt: 'Kenapa bisnis butuh sistem terintegrasi agar tidak ketinggalan zaman.'
+          excerpt: 'Kenali kebocoran profit dari stok dan kas yang tidak tercatat rapi.'
         },
         {
-          title: 'Cara Kurangi Stok Hilang Percuma',
+          title: 'Cara Stok Opname Tanpa Stres',
           date: '28 Sep 2023',
           readTime: '6 min baca',
-          excerpt: 'Tips manajemen gudang dan barcode agar stok selalu akurat.'
+          excerpt: 'Tips manajemen gudang agar stok fisik dan sistem selalu klop.'
         },
         {
-          title: 'Bikin Pelanggan Setia Selamanya',
+          title: 'Strategi CRM Bikin Pelanggan Loyal',
           date: '15 Sep 2023',
           readTime: '4 min baca',
-          excerpt: 'Pakai data CRM untuk buat program loyalitas yang menggoda.'
+          excerpt: 'Manfaatkan data pelanggan untuk promo yang bikin mereka balik lagi.'
         },
         {
-          title: 'Atur Arus Kas Agar Tidak Sengsara',
+          title: 'Pisahkan Uang Pribadi dan Bisnis',
           date: '10 Sep 2023',
           readTime: '7 min baca',
-          excerpt: 'Tips menjaga kesehatan finansial bisnis agar tetap profit.'
+          excerpt: 'Pentingnya laporan keuangan yang rapi demi masa depan usaha.'
         }
       ]
     }
@@ -358,38 +349,38 @@ export const translations = {
       industries: 'Industries',
       pricing: 'Pricing',
       login: 'Log In',
-      trial: 'Try for Free'
+      trial: 'Try Free'
     },
     hero: {
       badge: 'Seamless Business Solution',
-      title: 'Be a Business Star with JagoKelola',
-      headline: 'Manage Everything Seamlessly',
-      subtext: 'Forget the old ways that cause headaches. JagoKelola is here to organize your stock, finance, and team so your profit keeps shining.',
+      title: 'Be a Business Idol with JagoKelola',
+      headline: 'Manage Everything Without Obstacles',
+      subtext: 'One app for your stock, money, and team. Forget old ways that cause headaches, switch to JagoKelola so profits keep peak performance.',
       cta_primary: 'Start Free Trial',
-      cta_secondary: 'Contact Sales',
+      cta_secondary: 'See JagoKelola Demo',
       stats_revenue: 'Today\'s Revenue'
     },
     trusted: {
-      label: 'Trusted by modern businesses across Indonesia'
+      label: 'Trusted by modern businesses scaling up across Indonesia'
     },
     howItWorks: {
       subtitle: 'Integration Process',
-      title: 'Easy to Start, Instant Results',
-      desc: 'A system designed simply so anyone can use it immediately.',
+      title: 'Easy to Start, No Delays',
+      desc: 'System designed simply, even for non-tech teams.',
       steps: [
-        { title: 'Register Now', desc: 'Fast registration, get instant access.' },
-        { title: 'Input Data', desc: 'Enter stock and prices without headaches.' },
-        { title: 'Manage Instantly', desc: 'System active immediately, business ready to shine.' }
+        { title: 'Register Now', desc: 'Fast registration, active instantly without heavy conditions.' },
+        { title: 'Input Data', desc: 'Enter stock and prices, templates available to save your time.' },
+        { title: 'Manage Instantly', desc: 'System active immediately, business operations neatly organized.' }
       ]
     },
     cookie: {
-      text: 'We use cookies to ensure you get the best experience on our website.',
+      text: 'We use cookies to make your experience on JagoKelola enchanting.',
       accept: 'I Agree'
     },
     integrations: {
       subtitle: 'Connectivity',
-      title: 'Connect with Digital Ecosystems',
-      desc: 'Automatic synchronization with various platforms for maximum efficiency.',
+      title: 'Connected Ecosystem, Business Calm',
+      desc: 'Auto-sync with marketplaces and payments. Relax, let the system work.',
       marketplace: 'Marketplace',
       payment: 'Digital Payment',
       logistics: 'Logistics & Courier',
@@ -409,236 +400,226 @@ export const translations = {
       ]
     },
     download: {
-      title: 'Business Control in Your Hand',
-      desc: 'Monitor outlet performance, check sales reports, and manage employee approvals directly from your smartphone.',
+      title: 'Control Business From Anywhere',
+      desc: 'Monitor branch revenue, check low stock, approve leave requests. All in hand, peace of mind.',
       google: 'Google Play',
       apple: 'App Store'
     },
     pain: {
-      subtitle: 'Business Challenges',
-      title: 'Facing Obstacles?',
-      desc: 'Do not let daily operational issues stop your business from being a champion.',
+      subtitle: 'SME Challenges',
+      title: 'Working Hard but Results Mediocre?',
+      desc: 'Don\'t let operational issues eat your profit. Recognize signs your business needs JagoKelola.',
       solution_label: 'JagoKelola Solution:',
       items: [
         {
           id: 'stock',
-          title: "Unguarded Stock",
-          desc: "Items missing, stock discrepancies make profits vanish instantly."
+          title: "Stock Leaks & Missing",
+          desc: "Items vanish without trace? Stock discrepancies make profits leak and heads ache."
         },
         {
           id: 'finance',
           title: "Unreadable Finance",
-          desc: "Cash flow is unclear, business decisions become big question marks without data."
+          desc: "Profit or loss based on feeling? Messy cash flow makes business dizzy."
         },
         {
           id: 'staff',
-          title: "Hard to Manage Team",
-          desc: "Difficult to monitor performance when you are away, zero productivity."
+          title: "Owner Tied to Location",
+          desc: "Business stuck when you're away? Hard to monitor employees, productivity gone."
         }
       ]
     },
     features: {
       subtitle: 'Key Features',
-      title: 'Complete Features, Business Shines',
-      desc: 'One app for all business needs. From front cashier to back office reports, everything is available.',
+      title: 'One System, All Operations',
+      desc: 'No need for separate apps. JagoKelola unites cashier, warehouse, and reports in one place.',
       categories: [
         {
           id: 'pos_inventory',
-          label: 'POS & Inventory',
+          label: 'POS & Stock',
           items: [
-            { id: 'fast_checkout', title: 'Star POS', desc: 'Fast transactions with barcode scan and digital receipts.' },
-            { id: 'multi_warehouse', title: 'Managed Warehouse', desc: 'Control stock across multiple locations and branches seamlessly.' },
-            { id: 'supplier', title: 'Guarded Purchasing', desc: 'Automate POs to suppliers and keep organized debt records.' },
-            { id: 'table_management', title: 'Organized Orders', desc: 'Manage customer orders and shipments carefully.' }
+            { id: 'fast_checkout', title: 'Fast POS', desc: 'Quick barcode scan, customer queues won\'t rust.' },
+            { id: 'multi_warehouse', title: 'Multi Warehouse', desc: 'Monitor stock across locations from one phone. Transfer items without emotion.' },
+            { id: 'stock_opname', title: 'Drama-Free Opname', desc: 'Adjust physical and system stock easily, accurately, and thoroughly.' },
+            { id: 'offline_mode', title: 'No Internet? Safe', desc: 'JagoKelola keeps acting even if signal goes. Data syncs when online again.' }
           ]
         },
         {
           id: 'finance',
-          label: 'Finance & Accounting',
+          label: 'Finance',
           items: [
-            { id: 'auto_journal', title: 'Auto Journal', desc: 'Every transaction is recorded in bookkeeping without re-input.' },
-            { id: 'invoice', title: 'Smooth Invoicing', desc: 'Send professional invoices to clients, payments made easy.' },
-            { id: 'budget', title: 'Guarded Budget', desc: 'Control operational costs so they don\'t leak.' },
-            { id: 'realtime_pnl', title: 'Readable Profit', desc: 'P&L and Balance Sheet ready whenever you ask.' }
-          ]
-        },
-        {
-          id: 'hrm',
-          label: 'HR & Payroll',
-          items: [
-            { id: 'attendance', title: 'Accurate Attendance', desc: 'Monitor team presence with GPS, no more fake check-ins.' },
-            { id: 'payroll', title: 'Drama-Free Payroll', desc: 'Calculate salary, overtime, and bonuses automatically and on time.' },
-            { id: 'leave', title: 'Recorded Leave', desc: 'Integrated employee leave requests, easy to approve or postpone.' },
-            { id: 'recruitment', title: 'Personnel Data', desc: 'Store employee data and contracts safely.' }
+            { id: 'auto_journal', title: 'Auto Journal', desc: 'Cashier transactions become journals instantly. No need to be an accounting pro.' },
+            { id: 'realtime_pnl', title: 'Real P&L', desc: 'See profit this very second. Don\'t wait for end-of-month question marks.' },
+            { id: 'cash_flow', title: 'Guarded Cash Flow', desc: 'Monitor money in and out so business cash flow stays healthy.' },
+            { id: 'invoice', title: 'Neat Invoicing', desc: 'Send invoices to clients and monitor due receivables carefully.' }
           ]
         },
         {
           id: 'crm',
-          label: 'CRM & Customers',
+          label: 'Customer & Promo',
           items: [
-            { id: 'leads', title: 'Nurtured Leads', desc: 'Monitor potential customers so they don\'t go to competitors.' },
-            { id: 'contract', title: 'Customer Database', desc: 'Store shopping history for enchanting service.' },
-            { id: 'messenger', title: 'Guarded Loyalty', desc: 'Give points and special discounts so customers stay loyal.' },
-            { id: 'customer_db', title: 'Customer Analysis', desc: 'Understand customer behavior for targeted strategies.' }
+            { id: 'contract', title: 'Customer Database', desc: 'Save shopping history to make service more enchanting.' },
+            { id: 'messenger', title: 'Targeted Promo', desc: 'Broadcast promos to loyal customers, revenue rises instantly.' },
+            { id: 'leads', title: 'Guarded Loyalty', desc: 'Points and member system make customers return without force.' },
+            { id: 'customer_db', title: 'Citizen Analysis', desc: 'Understand favorite products for useful stock strategy.' }
           ]
         },
         {
-          id: 'project',
-          label: 'Project Management',
+          id: 'hrm',
+          label: 'Employees',
           items: [
-            { id: 'project_mgmt', title: 'Monitored Projects', desc: 'Keep project timeline and budget on plan.' },
-            { id: 'tasks', title: 'Even Tasks', desc: 'Distribute tasks fairly and transparently via Kanban.' },
-            { id: 'timesheet', title: 'Valuable Time', desc: 'Record work hours for accurate costing.' },
-            { id: 'bug_tracker', title: 'Work Together', desc: 'Team collaboration in one place, discussions become meaningful.' }
-          ]
-        },
-        {
-          id: 'support',
-          label: 'Tools & Support',
-          items: [
-            { id: 'zoom', title: 'Video Greet', desc: 'Online meetings directly from the app for instant coordination.' },
-            { id: 'settings', title: 'Guarded Access', desc: 'Set access rights for each staff for business data security.' },
-            { id: 'reports', title: 'Complete Reports', desc: 'Hundreds of ready-to-use templates for deep analysis.' },
-            { id: 'mobile', title: 'Instant Notifications', desc: 'Get notified via WA if important activities occur.' }
+            { id: 'attendance', title: 'GPS Attendance', desc: 'Monitor team presence accurately, no fake check-ins allowed.' },
+            { id: 'payroll', title: 'Auto Payroll', desc: 'Calculate salary, commission, and overtime automatically. Month-end stays sweet.' },
+            { id: 'settings', title: 'User Access', desc: 'Limit cashier and admin menus. Owner\'s sensitive data stays secure.' },
+            { id: 'performance', title: 'Monitor Performance', desc: 'See who is the most diligent cashier and who needs coaching.' }
           ]
         }
       ]
     },
     dashboard: {
-      title_1: 'Regular Monitoring,',
-      title_2: 'Managed Data.',
-      desc: 'All data right before your eyes. Make strategic decisions without guessing business conditions.',
+      title_1: 'Owner Focus Growth,',
+      title_2: 'System That Works.',
+      desc: 'Stop getting trapped in daily operations. Look at JagoKelola dashboard, make decisions with data, not feelings.',
       features: [
-        'Real P&L Reports',
-        'Visible Branch Performance',
-        'Low Stock Alerts',
-        'Sales Trends Recorded'
+        'Real-Time P&L Reports',
+        'Low Stock Notifications',
+        'Clear Branch Performance',
+        'Prevent Cash & Stock Leaks'
       ],
-      cta: 'View Star Demo',
-      active_badge: 'System On',
-      uptime: 'Uptime 99.9%'
+      cta: 'View JagoKelola Demo',
+      active_badge: 'Controlled Business',
+      uptime: 'Secure Cloud 99.9%'
     },
     industries: {
       subtitle: 'Business Sectors',
-      title: 'Suitable for All Businesses',
-      desc: 'Whatever the business type, JagoKelola is ready to make it successful.',
+      title: 'Whatever the Business, JagoKelola is the Solution',
+      desc: 'Flexible system that understands Indonesian SME field work patterns.',
       items: [
         {
           id: 'fnb',
           name: "Food & Beverage",
-          description: "Cafe, Restaurant, Coffee Shop, Franchise"
+          description: "Cafe, Restaurant, Franchise. Manage recipes & raw materials."
         },
         {
           id: 'retail',
           name: "Retail & Wholesale",
-          description: "Minimart, Grocery Store, Department Store"
+          description: "Minimart, Store. Fast transactions, thousands of SKUs safe."
         },
         {
           id: 'fashion',
           name: "Fashion & Lifestyle",
-          description: "Boutique, Distro, Accessories Store"
+          description: "Boutique, Distro. Manage color & size variants without headache."
+        },
+        {
+          id: 'distributor',
+          name: "Distributor & B2B",
+          description: "Wholesale. Manage orders, receivables, and mobile sales."
+        },
+        {
+          id: 'services',
+          name: "Services & Projects",
+          description: "Agency, Workshop, Salon. Monitor project progress and profit."
         }
       ]
     },
     testimonials: {
-      subtitle: "Testimonials",
-      title: "Success Stories",
-      desc: "See how JagoKelola helps businesses transform and grow.",
+      subtitle: "User Words",
+      title: "Neat Business, Happy Owner",
+      desc: "They have proven it. From messy to idol business.",
       items: [
         {
           name: "Budi Santoso",
           role: "Owner, Kopi Kenangan Hati",
-          quote: "Since using JagoKelola, I can monitor coffee bean stock in 5 branches just from my phone. Stock discrepancy dropped drastically, profit up 20% in 3 months.",
+          quote: "Coffee stock in 5 branches used to mismatch. Using JagoKelola, all monitored from phone. Discrepancies gone, profit comes.",
           image: "https://randomuser.me/api/portraits/men/32.jpg"
         },
         {
           name: "Siti Aminah",
           role: "Manager, Butik Muslimah",
-          quote: "The POS feature is very user friendly. My new staff only needed 10 minutes to learn. The sales reports are also very detailed!",
+          quote: "My team isn't tech-savvy, but JagoKelola is instant. Simple interface, new cashier ready in 10 minutes.",
           image: "https://randomuser.me/api/portraits/women/44.jpg"
         },
         {
           name: "Hendrawan",
-          role: "CEO, Retail Maju Jaya",
-          quote: "I used to have a headache managing payroll for 50 employees. Now it's all automated, from attendance to payslips. JagoKelola is truly an idol solution.",
+          role: "Distributor Sembako Jaya",
+          quote: "Managing customer debt used to be a headache. Now reminders are automatic. Cash flow runs smooth.",
           image: "https://randomuser.me/api/portraits/men/86.jpg"
         }
       ]
     },
     faq: {
-      subtitle: "Support",
-      title: "Q & A",
-      desc: "Answers to common questions from prospective partners.",
+      subtitle: "Your Doubts",
+      title: "Q & A (Objection Handling)",
+      desc: "Still hesitating to switch? Check answers to your worries.",
       items: [
         {
-          question: "Can it be used without internet?",
-          answer: "Absolutely. JagoKelola has an Offline Mode. Transactions keep going, data syncs itself when internet is back."
+          question: "I'm comfortable with Excel/Books, why switch?",
+          answer: "Excel is good for recording, JagoKelola is for controlling. Excel isn't real-time, doesn't cut stock automatically, and prone to formula errors. JagoKelola lets you know profit today."
         },
         {
-          question: "What hardware is needed?",
-          answer: "Anything works. Laptop, PC, or Android Tablet is recommended for a stylish cashier."
+          question: "My team isn't tech-savvy, will it be complicated?",
+          answer: "JagoKelola is made for non-IT people. Interface looks like daily apps. Cashier just scans and clicks, no accounting knowledge needed."
         },
         {
-          question: "Any unexpected fees?",
-          answer: "None. Our pricing is transparent. Unless you need special Enterprise features, that's calculated differently."
+          question: "What if internet dies? Business stops?",
+          answer: "Don't worry. JagoKelola has Offline Mode. Transactions keep flowing, data syncs automatically when internet is back. JagoKelola keeps acting!"
         },
         {
-          question: "What printers and scanners are supported?",
-          answer: "Almost all bluetooth/USB printers and barcode scanners on the market fit our system."
+          question: "Afraid moving old stock data is hard?",
+          answer: "We provide Excel templates for bulk import. You can start transactions today, old data can follow later. The important thing is getting tidy now."
         },
         {
-          question: "I have many branches, is it possible?",
-          answer: "Of course. Add as many branches as you want, manage in one dashboard. Stock transfer is also easy."
+          question: "Any hidden fees?",
+          answer: "Our price is transparent per outlet/month. No mandatory setup fees or surprise costs. All core features included."
         },
         {
           question: "Is my data safe?",
-          answer: "Very safe. Bank-grade encryption keeps your data. Automatic backups are always available."
+          answer: "Much safer than a book that can get lost or wet. Data is encrypted in international standard cloud servers and backed up automatically."
         }
       ]
     },
     pricing: {
-      subtitle: 'Subscription Plans',
-      title: 'Star Price, Matchless Features',
-      desc: 'Light cost for double benefits. Choose the plan that fits your business phase.',
-      popular: 'Most Liked',
-      select: 'Choose Now',
+      subtitle: 'Smart Investment',
+      title: 'Reasonable Price, Max Profit',
+      desc: 'Choose plan fitting your business phase. Upgrade anytime when business burns brighter.',
+      popular: 'Best Seller',
+      select: 'Choose This Plan',
       month: 'per outlet / month',
       tiers: [
         {
           name: 'Starter',
           price: 'Rp59.000',
-          description: 'Basic features for beginners.',
-          features: ['Cashier App (POS)', 'Basic Stock', 'Sales Reports', '1 Admin Only'],
+          description: 'For startups wanting to start neat.',
+          features: ['Cashier App (POS)', 'Basic Stock', 'Sales Reports', '1 Admin User'],
           recommended: false,
         },
         {
           name: 'Professional',
           price: 'Rp199.000',
-          description: 'Complete for burning businesses.',
-          features: ['Full ERP & Accounting', 'Employee Mgmt (HR)', 'Multi-Warehouse', 'Customer CRM', 'Main Support'],
+          description: 'Complete for scaling up businesses.',
+          features: ['Full ERP & Accounting', 'Attendance & Payroll (HR)', 'Multi-Warehouse', 'Customer CRM', 'Priority Support'],
           recommended: true,
         },
         {
           name: 'Enterprise',
           price: 'Rp599.000',
-          description: 'Large scale with infinite needs.',
+          description: 'Large scale with complex needs.',
           features: ['Unlimited User', 'Feature Customization', 'Special Manager', 'API Access', 'Private Server'],
           recommended: false,
         },
       ]
     },
     consultation: {
-      title: 'Ready to be a Star Business?',
-      desc: 'Discuss your obstacles. JagoKelola is ready to help organize strategies so business thrives.',
-      cta_wa: 'Chat WhatsApp',
-      cta_trial: 'Try Free Now',
+      title: 'Don\'t Manage Business Alone',
+      desc: 'JagoKelola helps tidy up, control, and grow your business. Discuss your needs now.',
+      cta_wa: 'Chat Sales Team',
+      cta_trial: 'Try Free First',
       form: {
-        name: 'Your Name',
-        email: 'Work Email',
-        subject: 'Needs',
+        name: 'Full Name',
+        email: 'Business Email',
+        subject: 'Business Type',
         message: 'Tell us your business obstacles...',
-        submit: 'Send News',
-        success: 'Message received. Our team will greet you soon.'
+        submit: 'Send Message',
+        success: 'Message received. Our team will help you soon.'
       }
     },
     footer: {
@@ -646,13 +627,13 @@ export const translations = {
       company: 'Company',
       contact: 'Contact',
       careers: 'Careers',
-      blog: 'Blog & News',
+      blog: 'Blog & Tips',
       terms: 'Terms & Conditions',
       privacy: 'Privacy Policy',
-      copyright: '© 2025 JagoKelola by CBX. All Rights Reserved.'
+      copyright: '© 2025 JagoKelola by CBX. Neat Business, Sure Profit.'
     },
     whatsapp: {
-      label: 'Chat Sales',
+      label: 'Free Consult',
     },
     careers_modal: {
       title: 'Careers at CBX',
@@ -662,45 +643,45 @@ export const translations = {
           title: 'Fullstack Engineer',
           type: 'Full Time',
           location: 'Jakarta / Remote',
-          desc: 'Join the engineering team to build a world-class ERP platform.',
-          requirements: ['Expert in React & Node.js', 'Understand Cloud', '3 years experience', 'Likes challenges']
+          desc: 'Join engineering team to build Indonesia\'s pride ERP platform.',
+          requirements: ['Expert React & Node.js', 'Understand Cloud', '3 years experience', 'Likes challenges']
         },
         {
-          title: 'Customer Success',
+          title: 'Sales Executive',
           type: 'Full Time',
           location: 'South Jakarta',
-          desc: 'Help clients maximize JagoKelola usage.',
-          requirements: ['Good communication', 'Patient service', 'Fast learner', 'Customer focused']
+          desc: 'Help Indonesian SMEs scale up with JagoKelola solution.',
+          requirements: ['Good communication', 'Target oriented', 'Has vehicle', 'High spirit']
         }
       ]
     },
     blog_modal: {
       title: 'Business Insights',
-      subtitle: 'Articles & News',
+      subtitle: 'Articles & Tips',
       posts: [
         {
-          title: 'ERP Makes Operations Stylish',
+          title: 'Signs Your Business Has Soft Leaks',
           date: 'Oct 12, 2023',
           readTime: '5 min read',
-          excerpt: 'Why businesses need integrated systems to stay updated.'
+          excerpt: 'Recognize profit leaks from unrecorded stock and cash.'
         },
         {
-          title: 'How to Reduce Wasted Stock',
+          title: 'Stock Opname Without Stress',
           date: 'Sep 28, 2023',
           readTime: '6 min read',
-          excerpt: 'Warehouse management tips and barcodes for accurate stock.'
+          excerpt: 'Warehouse management tips so physical and system stock always match.'
         },
         {
-          title: 'Make Customers Loyal Forever',
+          title: 'CRM Strategy for Loyal Customers',
           date: 'Sep 15, 2023',
           readTime: '4 min read',
-          excerpt: 'Use CRM data to create tempting loyalty programs.'
+          excerpt: 'Utilize customer data for promos that make them return.'
         },
         {
-          title: 'Manage Cash Flow to Avoid Misery',
+          title: 'Separate Personal and Business Money',
           date: 'Sep 10, 2023',
           readTime: '7 min read',
-          excerpt: 'Tips to keep business financial health profitable.'
+          excerpt: 'Importance of neat financial reports for business future.'
         }
       ]
     }

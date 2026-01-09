@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
             
             {/* SEO Friendly H1: aria-label ensures screen readers read the full sentence */}
             <h1 
-              className="text-5xl lg:text-7xl font-bold text-brand-blue dark:text-white tracking-tight leading-[1.1]"
+              className="text-4xl lg:text-6xl xl:text-7xl font-bold text-brand-blue dark:text-white tracking-tight leading-[1.1]"
               aria-label={titleString}
             >
               {titleWords.map((word, index) => (
@@ -52,11 +52,11 @@ const Hero: React.FC = () => {
             </h1>
 
             {/* Headline with fixed animation */}
-            <h2 className="text-2xl lg:text-3xl font-bold text-brand-darkBlue dark:text-gray-200 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <h2 className="text-xl lg:text-3xl font-bold text-brand-darkBlue dark:text-gray-200 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
               {t.hero.headline}
             </h2>
             
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
               {t.hero.subtext}
             </p>
             

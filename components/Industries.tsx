@@ -1,15 +1,17 @@
 import React from 'react';
-import { Coffee, ShoppingBag, Shirt, Store, UtensilsCrossed, Tag } from 'lucide-react';
+import { Coffee, ShoppingBag, Shirt, Store, UtensilsCrossed, Tag, Truck, Briefcase } from 'lucide-react';
 import { useAppContext } from '../ThemeContext';
 
 const Industries: React.FC = () => {
   const { t } = useAppContext();
 
-  // Enhanced Icon Mapping
+  // Enhanced Icon Mapping to match new translation IDs
   const iconMap: Record<string, any> = {
     fnb: UtensilsCrossed,
     retail: Store,
-    fashion: Tag
+    fashion: Tag,
+    distributor: Truck,
+    services: Briefcase
   };
 
   return (
@@ -39,8 +41,8 @@ const Industries: React.FC = () => {
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Cards Grid - Adjusted to flexible grid for 5 items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {t.industries.items.map((industry: any, idx: number) => {
             const Icon = iconMap[industry.id] || ShoppingBag;
             
