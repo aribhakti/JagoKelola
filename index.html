@@ -10,23 +10,24 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://api.fontshare.com">
     
     <!-- SEO & Meta Tags -->
     <meta name="description" content="JagoKelola adalah software ERP, POS & CRM all-in-one. Atur stok, keuangan, dan karyawan tanpa kendala. Solusi bisnis idola untuk FnB, Retail, dan Fashion.">
     <meta name="keywords" content="JagoKelola, Aplikasi Kasir, ERP Indonesia, POS System, CRM, Manajemen Stok, Software Akuntansi, HRM System, Aplikasi Bisnis">
     <meta name="author" content="CBX">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#103c6e">
+    <meta name="theme-color" content="#006f46">
     
     <!-- Favicon -->
-    <link rel="icon" href="https://via.placeholder.com/32/00b14f/ffffff?text=J" type="image/png">
+    <link rel="icon" href="https://via.placeholder.com/32/1db076/ffffff?text=J" type="image/png">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jagokelola.com/">
     <meta property="og:title" content="JagoKelola - Bisnis Jadi Idola">
     <meta property="og:description" content="Atur segala tanpa kendala. Sistem ERP & POS terintegrasi untuk profit bisnis yang menyala.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/103c6e/ffffff?text=JagoKelola+ERP">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/006f46/ffffff?text=JagoKelola+ERP">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="JagoKelola">
     
@@ -34,12 +35,16 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="JagoKelola - Bisnis Jadi Idola">
     <meta property="twitter:description" content="Tingkatkan profit bisnis dengan manajemen operasional yang rapi dan terintegrasi.">
-    <meta property="twitter:image" content="https://via.placeholder.com/1200x630/103c6e/ffffff?text=JagoKelola+ERP">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630/006f46/ffffff?text=JagoKelola+ERP">
 
-    <!-- Fonts - Preload for performance (CLS) -->
+    <!-- Fonts -->
+    <!-- Sora for Headlines -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- General Sans for Body -->
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">
@@ -81,15 +86,25 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['General Sans', 'sans-serif'],
+              display: ['Sora', 'sans-serif'],
             },
             colors: {
               brand: {
-                green: '#00b14f',     
-                darkGreen: '#009040',
-                blue: '#103c6e',      
-                darkBlue: '#0a274a',
-                light: '#f3f4f6',
+                // Exact Color Palette Mapping
+                fresh: '#abe3c4',     // Fresh Start (Light Green Accent)
+                mist: '#6ecca3',      // Growth Mist (Medium Green Accent)
+                green: '#1db076',     // Active Progress (Primary Button/Action)
+                darkGreen: '#018e5b', // Smart Control System (Hover/Active)
+                
+                // Mapping Core Brand Identity to Existing Class Names
+                blue: '#006f46',      // Jago Core Green (Primary Headings/Brand Color) - Replaces Navy
+                darkBlue: '#3c3c3B',  // Grey (Footer/Text/Contrast) - Replaces Dark Navy
+                
+                // Explicit references
+                core: '#006f46',      
+                grey: '#3c3c3B',      
+                light: '#f3f4f6',     
               }
             },
             animation: {
@@ -127,7 +142,14 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
+        font-family: 'General Sans', sans-serif;
       }
+      
+      /* Enforce Sora for all Headings */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Sora', sans-serif;
+      }
+
       html {
         scroll-behavior: smooth;
       }
@@ -148,11 +170,11 @@
         background: #0f172a;
       }
       .dark ::-webkit-scrollbar-thumb {
-        background: #334155;
+        background: #3c3c3B; /* Grey */
         border-radius: 4px;
       }
       .dark ::-webkit-scrollbar-thumb:hover {
-        background: #475569;
+        background: #006f46; /* Core Green */
       }
 
       /* Word Animation Classes */

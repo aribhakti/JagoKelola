@@ -17,16 +17,16 @@ const Hero: React.FC = () => {
       <ParticleBackground />
       <WaveBackground />
 
-      {/* Background Blobs with Animation */}
-      <div className="blob bg-brand-green/20 dark:bg-brand-green/10 w-[500px] h-[500px] rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 animate-blob"></div>
-      <div className="blob bg-blue-100/60 dark:bg-blue-900/20 w-[500px] h-[500px] rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 animate-blob" style={{ animationDelay: '2s' }}></div>
+      {/* Background Blobs with Animation - Using Palette */}
+      <div className="blob bg-brand-mist/30 dark:bg-brand-green/10 w-[500px] h-[500px] rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 animate-blob"></div>
+      <div className="blob bg-brand-fresh/40 dark:bg-brand-blue/20 w-[500px] h-[500px] rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 animate-blob" style={{ animationDelay: '2s' }}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Text Content */}
           <div className="space-y-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-50 to-blue-50 dark:from-slate-800 dark:to-slate-700 text-brand-green dark:text-green-400 font-medium text-sm border border-green-100 dark:border-slate-600 shadow-sm hover:shadow-md transition-all cursor-default group">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-50 to-emerald-50 dark:from-slate-800 dark:to-slate-700 text-brand-green dark:text-green-400 font-medium text-sm border border-brand-fresh/50 dark:border-slate-600 shadow-sm hover:shadow-md transition-all cursor-default group">
               <Sparkles size={16} className="mr-2 group-hover:animate-pulse text-brand-green dark:text-green-400" />
               <span className="font-semibold tracking-wide">{t.hero.badge}</span>
             </div>
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {word.includes('JagoKelola') ? (
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-teal-400">{word}</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green via-brand-mist to-brand-green">{word}</span>
                   ) : (
                     word
                   )}
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             </h1>
 
             {/* Headline with fixed animation */}
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-gray-200 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <h2 className="text-2xl lg:text-3xl font-bold text-brand-darkBlue dark:text-gray-200 opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
               {t.hero.headline}
             </h2>
             
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
                 href="https://wa.me/628567234922"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-white border border-gray-200 dark:border-slate-600 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:border-brand-green hover:text-brand-green dark:hover:text-green-400 hover:shadow-lg"
+                className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-brand-darkBlue dark:text-white border border-gray-200 dark:border-slate-600 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:border-brand-green hover:text-brand-green dark:hover:text-green-400 hover:shadow-lg"
                 aria-label={t.hero.cta_secondary}
               >
                 <MessageCircle size={20} className="text-brand-green dark:text-green-400" /> {t.hero.cta_secondary}
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
 
           {/* Hero Image / Dashboard Preview */}
           <div className="relative group perspective-1000">
-            <div className="relative rounded-2xl bg-gradient-to-br from-brand-blue to-blue-900 dark:from-slate-800 dark:to-slate-900 p-2 shadow-2xl transition-all duration-700 group-hover:rotate-0 group-hover:scale-[1.02] transform rotate-1">
+            <div className="relative rounded-2xl bg-gradient-to-br from-brand-blue to-brand-darkGreen dark:from-slate-800 dark:to-slate-900 p-2 shadow-2xl transition-all duration-700 group-hover:rotate-0 group-hover:scale-[1.02] transform rotate-1">
               <div className="absolute inset-0 bg-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
               
               {/* Mock Dashboard UI Structure */}
@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
                         <div className="h-5 w-16 bg-gray-800 dark:bg-slate-600 rounded"></div>
                       </div>
                     </div>
-                    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 h-28 flex flex-col justify-between hover:border-orange-200 transition-colors">
+                    <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 h-28 flex flex-col justify-between hover:border-brand-fresh transition-colors">
                        <div className="h-8 w-8 bg-orange-100 dark:bg-orange-900 rounded-lg text-orange-500 dark:text-orange-300 flex items-center justify-center">
                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                        </div>
@@ -139,7 +139,7 @@ const Hero: React.FC = () => {
             {/* Floating Element with Hover Effect */}
             <div className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-slate-700 animate-bounce duration-[3000ms] group-hover:scale-110 transition-transform">
               <div className="flex items-center gap-3">
-                <div className="bg-green-100 dark:bg-green-900 p-2 rounded-lg text-brand-green dark:text-green-300">
+                <div className="bg-brand-fresh/30 dark:bg-green-900 p-2 rounded-lg text-brand-green dark:text-green-300">
                   <ArrowRight size={20} className="rotate-[-45deg]" />
                 </div>
                 <div>

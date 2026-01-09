@@ -37,7 +37,8 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="bg-brand-blue dark:bg-slate-950 text-white pt-20 pb-10 border-t border-blue-800 dark:border-slate-800 transition-colors duration-300">
+      {/* Background set to brand-darkBlue which maps to Grey (#3c3c3B) */}
+      <footer className="bg-brand-darkBlue dark:bg-slate-950 text-white pt-20 pb-10 border-t border-brand-green/20 dark:border-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             
@@ -47,7 +48,7 @@ const Footer: React.FC = () => {
                 <div className="w-8 h-8 bg-brand-green rounded-md flex items-center justify-center font-bold shadow-lg shadow-green-500/20">J</div>
                 <span className="text-2xl font-bold tracking-tight">JagoKelola</span>
               </div>
-              <p className="text-blue-200 dark:text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 dark:text-gray-400 text-sm leading-relaxed">
                 Product by <span className="font-bold text-white">CBX</span>.<br/>
                 Platform manajemen bisnis modern untuk membantu operasional bisnis Anda lebih efisien.
               </p>
@@ -58,7 +59,7 @@ const Footer: React.FC = () => {
                     href={href} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-800/50 dark:bg-slate-800/50 p-2.5 rounded-full hover:bg-brand-green text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 group"
+                    className="bg-white/10 dark:bg-slate-800/50 p-2.5 rounded-full hover:bg-brand-green text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 group"
                     aria-label={label}
                   >
                     <Icon size={18} className="group-hover:rotate-6 transition-transform" />
@@ -69,48 +70,48 @@ const Footer: React.FC = () => {
 
             {/* Product */}
             <div>
-              <h4 className="font-bold text-lg mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">{t.footer.product}</h4>
-              <ul className="space-y-4 text-blue-200 dark:text-gray-400 text-sm">
-                <li><a href="#benefits" className="hover:text-white hover:translate-x-1 inline-block transition-transform">{t.nav.solutions}</a></li>
-                <li><a href="#industries" className="hover:text-white hover:translate-x-1 inline-block transition-transform">{t.nav.industries}</a></li>
-                <li><a href="#pricing" className="hover:text-white hover:translate-x-1 inline-block transition-transform">{t.nav.pricing}</a></li>
-                <li><a href="https://erp.cubix.co.id/login" className="hover:text-white hover:translate-x-1 inline-block transition-transform">{t.nav.login}</a></li>
+              <h4 className="font-bold text-lg mb-6 text-brand-fresh">{t.footer.product}</h4>
+              <ul className="space-y-4 text-gray-300 dark:text-gray-400 text-sm">
+                <li><a href="#benefits" className="hover:text-brand-fresh hover:translate-x-1 inline-block transition-transform">{t.nav.solutions}</a></li>
+                <li><a href="#industries" className="hover:text-brand-fresh hover:translate-x-1 inline-block transition-transform">{t.nav.industries}</a></li>
+                <li><a href="#pricing" className="hover:text-brand-fresh hover:translate-x-1 inline-block transition-transform">{t.nav.pricing}</a></li>
+                <li><a href="https://erp.cubix.co.id/login" className="hover:text-brand-fresh hover:translate-x-1 inline-block transition-transform">{t.nav.login}</a></li>
               </ul>
             </div>
 
             {/* Company */}
             <div>
-              <h4 className="font-bold text-lg mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">{t.footer.company}</h4>
-              <ul className="space-y-4 text-blue-200 dark:text-gray-400 text-sm">
-                <li><a href="#" onClick={openModal(t.footer.careers)} className="hover:text-white hover:translate-x-1 inline-block transition-transform">{t.footer.careers}</a></li>
-                <li><a href="#" onClick={openModal(t.footer.blog)} className="hover:text-white hover:translate-x-1 inline-block transition-transform">{t.footer.blog}</a></li>
-                <li><a href="#" onClick={openModal('Terms')} className="hover:text-white hover:translate-x-1 inline-block transition-transform">{t.footer.terms}</a></li>
+              <h4 className="font-bold text-lg mb-6 text-brand-fresh">{t.footer.company}</h4>
+              <ul className="space-y-4 text-gray-300 dark:text-gray-400 text-sm">
+                <li><a href="#" onClick={openModal(t.footer.careers)} className="hover:text-brand-fresh hover:translate-x-1 inline-block transition-transform">{t.footer.careers}</a></li>
+                <li><a href="#" onClick={openModal(t.footer.blog)} className="hover:text-brand-fresh hover:translate-x-1 inline-block transition-transform">{t.footer.blog}</a></li>
+                <li><a href="#" onClick={openModal('Terms')} className="hover:text-brand-fresh hover:translate-x-1 inline-block transition-transform">{t.footer.terms}</a></li>
               </ul>
             </div>
 
             {/* Contact */}
             <div>
-              <h4 className="font-bold text-lg mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">{t.footer.contact}</h4>
-              <ul className="space-y-4 text-blue-200 dark:text-gray-400 text-sm">
+              <h4 className="font-bold text-lg mb-6 text-brand-fresh">{t.footer.contact}</h4>
+              <ul className="space-y-4 text-gray-300 dark:text-gray-400 text-sm">
                 <li className="flex items-start gap-3 group">
-                  <MapPin size={18} className="mt-1 flex-shrink-0 group-hover:text-brand-green transition-colors" />
+                  <MapPin size={18} className="mt-1 flex-shrink-0 group-hover:text-brand-fresh transition-colors" />
                   <span>Jl. Pembangunan, Nirwana Townhouse 2 No 3, Cipedak</span>
                 </li>
                 <li className="flex items-center gap-3 group">
-                  <Phone size={18} className="flex-shrink-0 group-hover:text-brand-green transition-colors" />
-                  <a href="https://wa.me/628567234922" className="hover:text-white transition-colors">+62 856 7234 922</a>
+                  <Phone size={18} className="flex-shrink-0 group-hover:text-brand-fresh transition-colors" />
+                  <a href="https://wa.me/628567234922" className="hover:text-brand-fresh transition-colors">+62 856 7234 922</a>
                 </li>
                 <li className="flex items-center gap-3 group">
-                  <Mail size={18} className="flex-shrink-0 group-hover:text-brand-green transition-colors" />
-                  <a href="mailto:support@jagokelola.com" className="hover:text-white transition-colors">support@jagokelola.com</a>
+                  <Mail size={18} className="flex-shrink-0 group-hover:text-brand-fresh transition-colors" />
+                  <a href="mailto:support@jagokelola.com" className="hover:text-brand-fresh transition-colors">support@jagokelola.com</a>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-blue-800 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-blue-300 dark:text-gray-500 text-sm">{t.footer.copyright}</p>
-            <div className="flex gap-6 text-sm text-blue-300 dark:text-gray-500">
+          <div className="border-t border-gray-700 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 dark:text-gray-500 text-sm">{t.footer.copyright}</p>
+            <div className="flex gap-6 text-sm text-gray-400 dark:text-gray-500">
               <button onClick={openModal('Privacy Policy')} className="hover:text-white transition-colors">{t.footer.privacy}</button>
               <button onClick={openModal('Terms of Service')} className="hover:text-white transition-colors">{t.footer.terms}</button>
             </div>
