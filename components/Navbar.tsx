@@ -15,8 +15,8 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <a href="#" onClick={() => window.scrollTo(0,0)} className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-            <div className="w-10 h-10 bg-brand-green rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
+          <a href="#" onClick={() => window.scrollTo(0,0)} className="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+            <div className="w-10 h-10 bg-brand-green rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
               J
             </div>
             <div className="flex flex-col">
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
             <div className="flex items-center gap-2">
               <button 
                 onClick={toggleTheme}
-                className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors active:scale-90"
                 aria-label="Toggle Theme"
               >
                 {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               
               <button 
                 onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
-                className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1 font-semibold text-sm"
+                className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1 font-semibold text-sm active:scale-90"
                 aria-label="Toggle Language"
               >
                 <Globe size={18} />
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
               </a>
               <a 
                 href="https://erp.cubix.co.id/login" 
-                className="bg-brand-green hover:bg-brand-darkGreen text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-brand-green/20"
+                className="bg-brand-green hover:bg-brand-darkGreen text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-brand-green/20 active:scale-95"
                 rel="noopener noreferrer"
               >
                 {t.nav.trial}
@@ -75,14 +75,14 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center gap-4">
             <button 
                 onClick={toggleTheme}
-                className="p-2 rounded-full text-gray-500 dark:text-gray-400"
+                className="p-2 rounded-full text-gray-500 dark:text-gray-400 active:scale-90"
                 aria-label="Toggle Theme"
               >
                 {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
             <button 
               onClick={() => setIsOpen(!isOpen)} 
-              className="text-gray-600 dark:text-white hover:text-brand-blue"
+              className="text-gray-600 dark:text-white hover:text-brand-blue active:scale-90"
               aria-label="Menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
               <a 
                 href="https://erp.cubix.co.id/login" 
                 onClick={handleLinkClick}
-                className="w-full block text-center bg-brand-green text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-brand-green/20"
+                className="w-full block text-center bg-brand-green text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-brand-green/20 active:scale-95 transition-transform"
                 rel="noopener noreferrer"
               >
                 {t.nav.trial}

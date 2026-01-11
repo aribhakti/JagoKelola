@@ -12,26 +12,26 @@ const Hero: React.FC = () => {
   const titleWords = titleString.split(' ');
 
   return (
-    <div className="relative pt-32 pb-32 lg:pt-48 lg:pb-48 overflow-hidden bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white dark:bg-slate-900 transition-colors duration-300">
       {/* Dynamic Backgrounds - Optimized */}
       <ParticleBackground />
       <WaveBackground />
 
       {/* Background Blobs with Animation - Using Palette */}
-      <div className="blob bg-brand-mist/30 dark:bg-brand-green/10 w-[500px] h-[500px] rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 animate-blob"></div>
-      <div className="blob bg-brand-fresh/40 dark:bg-brand-blue/20 w-[500px] h-[500px] rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 animate-blob" style={{ animationDelay: '2s' }}></div>
+      <div className="blob bg-brand-mist/30 dark:bg-brand-green/10 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 animate-blob will-change-transform"></div>
+      <div className="blob bg-brand-fresh/40 dark:bg-brand-blue/20 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 animate-blob will-change-transform" style={{ animationDelay: '2s' }}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Text Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-50 to-emerald-50 dark:from-slate-800 dark:to-slate-700 text-brand-green dark:text-green-400 font-medium text-sm border border-brand-fresh/50 dark:border-slate-600 shadow-sm hover:shadow-md transition-all cursor-default group">
               <Sparkles size={16} className="mr-2 group-hover:animate-pulse text-brand-green dark:text-green-400" />
               <span className="font-semibold tracking-wide">{t.hero.badge}</span>
             </div>
             
-            {/* SEO Friendly H1: aria-label ensures screen readers read the full sentence */}
+            {/* SEO Friendly H1 */}
             <h1 
               className="text-4xl lg:text-6xl xl:text-7xl font-bold text-brand-blue dark:text-white tracking-tight leading-[1.1]"
               aria-label={titleString}
@@ -56,14 +56,14 @@ const Hero: React.FC = () => {
               {t.hero.headline}
             </h2>
             
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg mx-auto lg:mx-0 leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
               {t.hero.subtext}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>
               <a 
                 href="https://erp.cubix.co.id/login"
-                className="group flex items-center justify-center gap-2 bg-gradient-to-r from-brand-green to-brand-darkGreen text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-brand-green/20 hover:shadow-brand-green/40 hover:-translate-y-1"
+                className="group flex items-center justify-center gap-2 bg-gradient-to-r from-brand-green to-brand-darkGreen text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl shadow-brand-green/20 hover:shadow-brand-green/40 hover:-translate-y-1 active:scale-95"
                 aria-label={t.hero.cta_primary}
               >
                 {t.hero.cta_primary}
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
                 href="https://wa.me/628567234922"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-brand-darkBlue dark:text-white border border-gray-200 dark:border-slate-600 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:border-brand-green hover:text-brand-green dark:hover:text-green-400 hover:shadow-lg"
+                className="flex items-center justify-center gap-2 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 text-brand-darkBlue dark:text-white border border-gray-200 dark:border-slate-600 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:border-brand-green hover:text-brand-green dark:hover:text-green-400 hover:shadow-lg active:scale-95"
                 aria-label={t.hero.cta_secondary}
               >
                 <MessageCircle size={20} className="text-brand-green dark:text-green-400" /> {t.hero.cta_secondary}
@@ -82,11 +82,11 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Hero Image / Dashboard Preview */}
-          <div className="relative group perspective-1000">
+          <div className="relative group perspective-1000 mt-8 lg:mt-0">
             <div className="relative rounded-2xl bg-gradient-to-br from-brand-blue to-brand-darkGreen dark:from-slate-800 dark:to-slate-900 p-2 shadow-2xl transition-all duration-700 group-hover:rotate-0 group-hover:scale-[1.02] transform rotate-1">
               <div className="absolute inset-0 bg-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
               
-              {/* Mock Dashboard UI Structure */}
+              {/* Mock Dashboard UI Structure - Fixed Aspect Ratio to prevent CLS */}
               <div className="relative bg-gray-50 dark:bg-slate-900 rounded-xl overflow-hidden aspect-[4/3] border border-gray-200 dark:border-slate-700 flex group-hover:saturate-[1.1] transition-all duration-500">
                 {/* Sidebar Mock */}
                 <div className="w-16 md:w-48 bg-white dark:bg-slate-800 border-r border-gray-100 dark:border-slate-700 hidden sm:flex flex-col p-4 gap-4">
@@ -137,7 +137,7 @@ const Hero: React.FC = () => {
             </div>
             
             {/* Floating Element with Hover Effect */}
-            <div className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-slate-700 animate-bounce duration-[3000ms] group-hover:scale-110 transition-transform">
+            <div className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-slate-700 animate-bounce duration-[3000ms] group-hover:scale-110 transition-transform hidden sm:block">
               <div className="flex items-center gap-3">
                 <div className="bg-brand-fresh/30 dark:bg-green-900 p-2 rounded-lg text-brand-green dark:text-green-300">
                   <ArrowRight size={20} className="rotate-[-45deg]" />

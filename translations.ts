@@ -144,7 +144,13 @@ export const translations = {
       ],
       cta: 'Lihat Demo JagoKelola',
       active_badge: 'Bisnis Terkendali',
-      uptime: 'Cloud Aman 99.9%'
+      uptime: 'Cloud Aman 99.9%',
+      labels: {
+        revenue: 'Omzet Cabang',
+        stock: 'Stok Menipis',
+        branches: ['Jakarta', 'Bandung', 'Surabaya', 'Medan', 'Bali'],
+        alerts: ['Kopi Arabika (Sisa 2kg)', 'Gula Pasir (Habis)', 'Struk (Roll Tipis)']
+      }
     },
     industries: {
       subtitle: 'Sektor Bisnis',
@@ -154,27 +160,32 @@ export const translations = {
         {
           id: 'fnb',
           name: "Food & Beverage",
-          description: "Cafe, Restoran, Franchise. Kelola resep & bahan baku."
+          problem: "Bahan baku sering selisih & antrian lama.",
+          solution: "Resep otomatis potong stok & POS instan."
         },
         {
           id: 'retail',
           name: "Retail & Grosir",
-          description: "Minimarket, Toserba. Transaksi cepat, stok ribuan SKU aman."
+          problem: "Ribuan SKU susah dipantau & stok hilang.",
+          solution: "Scan barcode cepat & notifikasi stok minim."
         },
         {
           id: 'fashion',
           name: "Fashion & Lifestyle",
-          description: "Butik, Distro. Kelola varian warna & ukuran tanpa pusing."
+          problem: "Pusing catat varian warna & ukuran.",
+          solution: "Matriks produk varian & cek stok via HP."
         },
         {
           id: 'distributor',
           name: "Distributor & B2B",
-          description: "Grosir besar. Atur pesanan, piutang, dan sales keliling."
+          problem: "Piutang macet & salah kirim barang.",
+          solution: "Reminder jatuh tempo & surat jalan otomatis."
         },
         {
           id: 'services',
           name: "Jasa & Proyek",
-          description: "Agency, Bengkel, Salon. Pantau progress dan profit proyek."
+          problem: "Biaya proyek bocor & profit tidak jelas.",
+          solution: "Catat biaya per proyek & hitung profit akurat."
         }
       ]
     },
@@ -245,22 +256,22 @@ export const translations = {
         {
           name: 'Starter',
           price: 'Rp59.000',
-          description: 'Untuk usaha rintisan yang ingin mulai rapi.',
+          description: 'Usaha pemula (F&B/Retail Kecil).',
           features: ['Aplikasi Kasir (POS)', 'Stok Dasar', 'Laporan Penjualan', '1 Admin User'],
           recommended: false,
         },
         {
           name: 'Professional',
           price: 'Rp199.000',
-          description: 'Lengkap untuk bisnis yang sedang scale-up.',
-          features: ['Full ERP & Akuntansi', 'Absensi & Gaji (HR)', 'Multi-Gudang', 'CRM Pelanggan', 'Support Prioritas'],
+          description: 'Paling disuka. Full control.',
+          features: ['Full ERP & Akuntansi', 'HR & Karyawan', 'Multi Gudang & Cabang', 'CRM Pelanggan', 'Support Utama'],
           recommended: true,
         },
         {
           name: 'Enterprise',
           price: 'Rp599.000',
-          description: 'Skala besar dengan kebutuhan kompleks.',
-          features: ['Unlimited User', 'Kustomisasi Fitur', 'Manager Khusus', 'Akses API', 'Server Pribadi'],
+          description: 'Skala besar & custom.',
+          features: ['Unlimited User', 'Kustomisasi Fitur', 'Akses API', 'Server Pribadi', 'Manager Khusus'],
           recommended: false,
         },
       ]
@@ -487,7 +498,13 @@ export const translations = {
       ],
       cta: 'View JagoKelola Demo',
       active_badge: 'Controlled Business',
-      uptime: 'Secure Cloud 99.9%'
+      uptime: 'Secure Cloud 99.9%',
+      labels: {
+        revenue: 'Branch Revenue',
+        stock: 'Low Stock',
+        branches: ['Jakarta', 'Bandung', 'Surabaya', 'Medan', 'Bali'],
+        alerts: ['Arabica Coffee (Low)', 'Sugar (Empty)', 'Receipt Paper (Low)']
+      }
     },
     industries: {
       subtitle: 'Business Sectors',
@@ -497,27 +514,32 @@ export const translations = {
         {
           id: 'fnb',
           name: "Food & Beverage",
-          description: "Cafe, Restaurant, Franchise. Manage recipes & raw materials."
+          problem: "Ingredients mismatch & long queues.",
+          solution: "Auto-deduct recipe stock & instant POS."
         },
         {
           id: 'retail',
           name: "Retail & Wholesale",
-          description: "Minimart, Store. Fast transactions, thousands of SKUs safe."
+          problem: "Thousands of SKUs hard to track.",
+          solution: "Fast barcode scan & minimum stock alerts."
         },
         {
           id: 'fashion',
           name: "Fashion & Lifestyle",
-          description: "Boutique, Distro. Manage color & size variants without headache."
+          problem: "Messy color & size variant tracking.",
+          solution: "Product matrix & mobile stock check."
         },
         {
           id: 'distributor',
           name: "Distributor & B2B",
-          description: "Wholesale. Manage orders, receivables, and mobile sales."
+          problem: "Bad debt & wrong shipments.",
+          solution: "Due date reminders & auto delivery orders."
         },
         {
           id: 'services',
           name: "Services & Projects",
-          description: "Agency, Workshop, Salon. Monitor project progress and profit."
+          problem: "Project cost leaks & unclear profit.",
+          solution: "Record project costs & calculate profit accurately."
         }
       ]
     },
@@ -588,22 +610,22 @@ export const translations = {
         {
           name: 'Starter',
           price: 'Rp59.000',
-          description: 'For startups wanting to start neat.',
+          description: 'Startups (Small F&B/Retail).',
           features: ['Cashier App (POS)', 'Basic Stock', 'Sales Reports', '1 Admin User'],
           recommended: false,
         },
         {
           name: 'Professional',
           price: 'Rp199.000',
-          description: 'Complete for scaling up businesses.',
-          features: ['Full ERP & Accounting', 'Attendance & Payroll (HR)', 'Multi-Warehouse', 'Customer CRM', 'Priority Support'],
+          description: 'Most loved. Full control.',
+          features: ['Full ERP & Accounting', 'HR & Employees', 'Multi-Warehouse', 'Customer CRM', 'Priority Support'],
           recommended: true,
         },
         {
           name: 'Enterprise',
           price: 'Rp599.000',
-          description: 'Large scale with complex needs.',
-          features: ['Unlimited User', 'Feature Customization', 'Special Manager', 'API Access', 'Private Server'],
+          description: 'Large scale & custom.',
+          features: ['Unlimited User', 'Feature Customization', 'API Access', 'Private Server', 'Special Manager'],
           recommended: false,
         },
       ]

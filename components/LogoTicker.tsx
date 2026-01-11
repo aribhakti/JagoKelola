@@ -41,7 +41,7 @@ const LogoTicker: React.FC = () => {
         <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-10"></div>
 
         <div className="flex animate-marquee whitespace-nowrap">
-          {/* First set of logos */}
+          {/* First set of logos - Accessible */}
           <div className="flex gap-16 mx-8 items-center">
             {logos.map((logo, idx) => (
               <span 
@@ -53,8 +53,8 @@ const LogoTicker: React.FC = () => {
             ))}
           </div>
 
-          {/* Second set of logos for seamless loop */}
-          <div className="flex gap-16 mx-8 items-center">
+          {/* Second set of logos for seamless loop - Hidden from Screen Readers */}
+          <div className="flex gap-16 mx-8 items-center" aria-hidden="true">
              {logos.map((logo, idx) => (
               <span 
                 key={`dup-${idx}`} 

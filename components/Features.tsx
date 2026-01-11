@@ -10,11 +10,11 @@ const Features: React.FC = () => {
   const categories = t.features.categories;
 
   return (
-    <section id="features" className="py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
+    <section id="features" className="py-16 lg:py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-teal-500 font-semibold tracking-wide uppercase text-sm mb-3">
             {t.features.subtitle}
           </h2>
@@ -27,7 +27,7 @@ const Features: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-10 lg:mb-12">
           {categories.map((category: any, index: number) => (
             <button
               key={category.id}
@@ -35,7 +35,7 @@ const Features: React.FC = () => {
               className={`px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                 activeCategory === index
                   ? 'bg-brand-green text-white shadow-lg shadow-green-500/30 scale-105'
-                  : 'bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
+                  : 'bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700 active:scale-95'
               }`}
             >
               {category.label}

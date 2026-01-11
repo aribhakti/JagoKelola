@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, ShoppingBag, Shirt, Store, UtensilsCrossed, Tag, Truck, Briefcase } from 'lucide-react';
+import { Coffee, ShoppingBag, Shirt, Store, UtensilsCrossed, Tag, Truck, Briefcase, ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { useAppContext } from '../ThemeContext';
 
 const Industries: React.FC = () => {
@@ -15,7 +15,7 @@ const Industries: React.FC = () => {
   };
 
   return (
-    <section id="industries" className="py-24 bg-brand-blue dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
+    <section id="industries" className="py-16 lg:py-24 bg-brand-blue dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
       
       {/* Background Ambience */}
       <div className="absolute inset-0">
@@ -41,35 +41,61 @@ const Industries: React.FC = () => {
           </p>
         </div>
 
-        {/* Cards Grid - Adjusted to flexible grid for 5 items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        {/* Cards Grid - Compact Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
           {t.industries.items.map((industry: any, idx: number) => {
             const Icon = iconMap[industry.id] || ShoppingBag;
             
             return (
               <div 
                 key={idx} 
-                className="group relative h-80 rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:shadow-[0_0_40px_-10px_rgba(0,177,79,0.3)] hover:scale-[1.02]"
+                className="group relative h-64 rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(0,177,79,0.3)] hover:scale-[1.02] cursor-default"
               >
-                {/* Card Content */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-between z-20">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 to-white/5 border border-white/10 flex items-center justify-center text-white mb-4 shadow-lg group-hover:scale-110 group-hover:from-brand-green group-hover:to-emerald-600 transition-all duration-500">
-                    <Icon size={32} />
+                {/* Default State Content */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-between z-20 transition-opacity duration-300 group-hover:opacity-0 group-hover:translate-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-white/20 to-white/5 border border-white/10 flex items-center justify-center text-white mb-4 shadow-lg">
+                    <Icon size={20} />
                   </div>
                   
                   <div>
-                    <h4 className="text-2xl font-bold text-white mb-3 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h4 className="text-lg font-bold text-white mb-2">
                       {industry.name}
                     </h4>
-                    <p className="text-blue-200 text-sm leading-relaxed opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75">
-                      {industry.description}
+                    <p className="text-blue-200 text-xs leading-relaxed line-clamp-2">
+                      {industry.problem}
                     </p>
+                    <div className="mt-3 flex items-center text-brand-green text-xs font-bold">
+                      Lihat Solusi <ArrowRight size={12} className="ml-1" />
+                    </div>
                   </div>
                 </div>
 
+                {/* Hover State Content (Problem vs Solution) */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-center z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-brand-darkBlue/90 backdrop-blur-md">
+                   <div className="space-y-4">
+                      <div>
+                        <div className="flex items-center gap-2 text-red-400 text-xs font-bold uppercase mb-1">
+                          <AlertCircle size={12} /> Masalah
+                        </div>
+                        <p className="text-white text-sm leading-snug">
+                          {industry.problem}
+                        </p>
+                      </div>
+                      <div className="h-px bg-white/10 w-full"></div>
+                      <div>
+                        <div className="flex items-center gap-2 text-brand-green text-xs font-bold uppercase mb-1">
+                          <CheckCircle2 size={12} /> Solusi
+                        </div>
+                        <p className="text-white text-sm leading-snug">
+                          {industry.solution}
+                        </p>
+                      </div>
+                   </div>
+                </div>
+
                 {/* Decorative Icon Watermark */}
-                <div className="absolute -bottom-10 -right-10 text-white/5 rotate-[-15deg] transform group-hover:rotate-0 group-hover:scale-110 transition-all duration-700 z-10">
-                  <Icon size={200} />
+                <div className="absolute -bottom-8 -right-8 text-white/5 rotate-[-15deg] transform group-hover:rotate-0 group-hover:scale-110 transition-all duration-700 z-10">
+                  <Icon size={140} />
                 </div>
               </div>
             );

@@ -37,7 +37,7 @@ const Consultation: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section className="py-16 lg:py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-br from-brand-blue to-blue-900 dark:from-slate-800 dark:to-slate-950 rounded-3xl overflow-hidden shadow-2xl border border-white/10 dark:border-slate-700">
           <div className="grid lg:grid-cols-2">
@@ -60,14 +60,14 @@ const Consultation: React.FC = () => {
                     href="https://wa.me/628567234922"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-darkGreen text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-green-500/50 hover:-translate-y-1"
+                    className="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-darkGreen text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-green-500/50 hover:-translate-y-1 active:scale-95"
                   >
                     <MessageCircle size={20} />
                     {t.consultation.cta_wa}
                   </a>
                   <a 
                     href="https://erp.cubix.co.id/login"
-                    className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-colors"
+                    className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 text-white px-8 py-3.5 rounded-xl font-bold text-base transition-colors active:scale-95"
                   >
                     {t.consultation.cta_trial} <ArrowRight size={20} />
                   </a>
@@ -96,7 +96,7 @@ const Consultation: React.FC = () => {
                        required
                        value={formState.name}
                        onChange={handleChange}
-                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all"
+                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:ring-offset-2 focus:ring-offset-blue-900 transition-all"
                        placeholder="John Doe"
                      />
                    </div>
@@ -110,7 +110,7 @@ const Consultation: React.FC = () => {
                        required
                        value={formState.email}
                        onChange={handleChange}
-                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all"
+                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:ring-offset-2 focus:ring-offset-blue-900 transition-all"
                        placeholder="john@company.com"
                      />
                    </div>
@@ -124,7 +124,7 @@ const Consultation: React.FC = () => {
                        required
                        value={formState.subject}
                        onChange={handleChange}
-                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all"
+                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:ring-offset-2 focus:ring-offset-blue-900 transition-all"
                        placeholder="Demo Request"
                      />
                    </div>
@@ -138,14 +138,14 @@ const Consultation: React.FC = () => {
                        rows={4}
                        value={formState.message}
                        onChange={handleChange}
-                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all resize-none"
+                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:ring-offset-2 focus:ring-offset-blue-900 transition-all resize-none"
                      ></textarea>
                    </div>
 
                    <button 
                      type="submit" 
                      disabled={isSubmitting}
-                     className="w-full bg-brand-green hover:bg-brand-darkGreen disabled:bg-gray-500 disabled:cursor-not-allowed text-white py-3.5 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-green-500/30 mt-2 flex items-center justify-center gap-2"
+                     className="w-full bg-brand-green hover:bg-brand-darkGreen disabled:bg-gray-500 disabled:cursor-not-allowed text-white py-3.5 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-green-500/30 mt-2 flex items-center justify-center gap-2 active:scale-95"
                    >
                      {isSubmitting ? (
                        <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>

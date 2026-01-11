@@ -6,7 +6,7 @@ const Pricing: React.FC = () => {
   const { t } = useAppContext();
 
   return (
-    <section id="pricing" className="py-24 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
+    <section id="pricing" className="py-16 lg:py-24 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-brand-green font-semibold tracking-wide uppercase text-sm mb-3">{t.pricing.subtitle}</h2>
@@ -57,7 +57,7 @@ const Pricing: React.FC = () => {
               </ul>
 
               <button 
-                className={`w-full py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={`w-full py-3 rounded-lg font-medium transition-all duration-300 active:scale-95 ${
                   tier.recommended 
                     ? 'bg-brand-green hover:bg-brand-darkGreen text-white shadow-lg shadow-brand-green/20 hover:shadow-brand-green/40 hover:scale-[1.02]' 
                     : 'bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 text-brand-blue dark:text-white hover:bg-brand-blue hover:text-white dark:hover:bg-slate-700 hover:border-brand-blue dark:hover:border-slate-600'

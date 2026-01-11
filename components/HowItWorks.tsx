@@ -8,11 +8,11 @@ const HowItWorks: React.FC = () => {
   const icons = [UserPlus, Settings, TrendingUp];
 
   return (
-    <section className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section className="py-16 lg:py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
           <h2 className="text-brand-green font-semibold tracking-wide uppercase text-sm mb-3">
             {t.howItWorks.subtitle}
           </h2>

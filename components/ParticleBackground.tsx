@@ -1,30 +1,49 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useAppContext } from '../ThemeContext';
 
 const ParticleBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null); // For Intersection Observer
   const { theme } = useAppContext();
+  const [isInView, setIsInView] = useState(true);
+
+  // Intersection Observer Setup
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0 } // Trigger as soon as 1px is visible
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
-    // Performance: Check for reduced motion preference
+    // If not in view or reduced motion is on, don't run animation loop
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion || !isInView) return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d', { alpha: true }); // Optimize for alpha
+    const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
 
     let particles: Particle[] = [];
     let animationFrameId: number;
-    // Check if device is mobile to reduce load
     const isMobile = window.innerWidth < 768;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
+      if (canvas.parentElement) {
+        canvas.width = canvas.parentElement.clientWidth;
+        canvas.height = canvas.parentElement.clientHeight;
+        initParticles();
+      }
     };
 
     class Particle {
@@ -38,11 +57,10 @@ const ParticleBackground: React.FC = () => {
       constructor() {
         this.x = Math.random() * (canvas?.width || 0);
         this.y = Math.random() * (canvas?.height || 0);
-        this.size = Math.random() * 2 + 0.5; // Smaller particles
-        this.speedX = Math.random() * 0.4 - 0.2; // Slower speed
-        this.speedY = Math.random() * 0.4 - 0.2; // Slower speed
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = Math.random() * 0.4 - 0.2;
+        this.speedY = Math.random() * 0.4 - 0.2;
         
-        // Colors adapted for theme
         const isDark = document.documentElement.classList.contains('dark');
         const colors = isDark 
           ? ['rgba(0, 177, 79, 0.15)', 'rgba(255, 255, 255, 0.1)', 'rgba(16, 60, 110, 0.15)']
@@ -55,8 +73,7 @@ const ParticleBackground: React.FC = () => {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        // Subtle Mouse interaction - Only on desktop to save performance
-        if (!isMobile) {
+        if (!isMobile && mouseX !== 0 && mouseY !== 0) {
           const dx = mouseX - this.x;
           const dy = mouseY - this.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -90,10 +107,9 @@ const ParticleBackground: React.FC = () => {
 
     function initParticles() {
       particles = [];
-      // Performance: Reduce number of particles drastically for mobile
       const density = isMobile ? 40000 : 20000; 
       const maxParticles = isMobile ? 15 : 50; 
-      const numberOfParticles = Math.min((window.innerWidth * window.innerHeight) / density, maxParticles);
+      const numberOfParticles = Math.min(((canvas?.width || window.innerWidth) * (canvas?.height || window.innerHeight)) / density, maxParticles);
       
       for (let i = 0; i < numberOfParticles; i++) {
         particles.push(new Particle());
@@ -105,8 +121,10 @@ const ParticleBackground: React.FC = () => {
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!isMobile) {
-        mouseX = e.x;
-        mouseY = e.y;
+        // Get mouse pos relative to canvas
+        const rect = canvas.getBoundingClientRect();
+        mouseX = e.clientX - rect.left;
+        mouseY = e.clientY - rect.top;
       }
     };
 
@@ -118,15 +136,13 @@ const ParticleBackground: React.FC = () => {
         particles[i].update(mouseX, mouseY);
         particles[i].draw();
         
-        // Performance: Skip connection drawing on mobile completely to save CPU
         if (!isMobile) { 
           for (let j = i; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
-            // Simplified distance check (square distance is faster than sqrt)
             const distSq = dx * dx + dy * dy;
             
-            if (distSq < 6400) { // 80 * 80
+            if (distSq < 6400) { 
               ctx.beginPath();
               const distance = Math.sqrt(distSq);
               ctx.strokeStyle = `rgba(16, 60, 110, ${0.05 - distance/2000})`; 
@@ -153,14 +169,16 @@ const ParticleBackground: React.FC = () => {
       window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [theme]);
+  }, [theme, isInView]); // Re-run when theme changes or visibility changes
 
   return (
-    <canvas 
-      ref={canvasRef} 
-      className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 opacity-60"
-      style={{ willChange: 'transform' }}
-    />
+    <div ref={containerRef} className="absolute inset-0 z-0 pointer-events-none">
+      <canvas 
+        ref={canvasRef} 
+        className="w-full h-full opacity-60"
+        style={{ willChange: 'transform' }}
+      />
+    </div>
   );
 };
 
