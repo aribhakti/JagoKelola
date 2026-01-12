@@ -36,7 +36,7 @@ const Industries: React.FC = () => {
           <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">
             {t.industries.title}
           </h3>
-          <p className="text-blue-100 text-lg max-w-2xl mx-auto opacity-90">
+          <p className="text-green-50 text-lg max-w-2xl mx-auto opacity-90">
             {t.industries.desc}
           </p>
         </div>
@@ -61,7 +61,7 @@ const Industries: React.FC = () => {
                     <h4 className="text-lg font-bold text-white mb-2">
                       {industry.name}
                     </h4>
-                    <p className="text-blue-200 text-xs leading-relaxed line-clamp-2">
+                    <p className="text-green-100/80 text-xs leading-relaxed line-clamp-2">
                       {industry.problem}
                     </p>
                     <div className="mt-3 flex items-center text-brand-green text-xs font-bold">

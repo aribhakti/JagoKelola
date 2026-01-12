@@ -11,14 +11,13 @@ const PainPoints = React.lazy(() => import('./components/PainPoints'));
 const Industries = React.lazy(() => import('./components/Industries'));
 const Features = React.lazy(() => import('./components/Features'));
 const InteractiveDashboard = React.lazy(() => import('./components/InteractiveDashboard'));
-const Integrations = React.lazy(() => import('./components/Integrations')); // Added
 const HowItWorks = React.lazy(() => import('./components/HowItWorks'));
-const Testimonials = React.lazy(() => import('./components/Testimonials')); // Added
 const Pricing = React.lazy(() => import('./components/Pricing'));
 const FAQ = React.lazy(() => import('./components/FAQ'));
 const Consultation = React.lazy(() => import('./components/Consultation'));
 const Footer = React.lazy(() => import('./components/Footer'));
 const LogoTicker = React.lazy(() => import('./components/LogoTicker'));
+const BackToTop = React.lazy(() => import('./components/BackToTop'));
 
 const App: React.FC = () => {
   return (
@@ -36,9 +35,7 @@ const App: React.FC = () => {
             <Industries />
             <Features />
             <InteractiveDashboard />
-            <Integrations />
             <HowItWorks />
-            <Testimonials />
             <Pricing />
             <FAQ />
             <Consultation />
@@ -47,6 +44,7 @@ const App: React.FC = () => {
         
         <Suspense fallback={null}>
           <Footer />
+          <BackToTop />
         </Suspense>
         
         <FloatingWhatsApp />

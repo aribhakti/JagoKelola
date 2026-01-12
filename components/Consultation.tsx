@@ -39,7 +39,7 @@ const Consultation: React.FC = () => {
   return (
     <section className="py-16 lg:py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-brand-blue to-blue-900 dark:from-slate-800 dark:to-slate-950 rounded-3xl overflow-hidden shadow-2xl border border-white/10 dark:border-slate-700">
+        <div className="bg-gradient-to-br from-brand-blue to-brand-darkGreen dark:from-slate-800 dark:to-slate-950 rounded-3xl overflow-hidden shadow-2xl border border-white/10 dark:border-slate-700">
           <div className="grid lg:grid-cols-2">
             
             {/* Left Column: Content */}
@@ -51,7 +51,7 @@ const Consultation: React.FC = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                   {t.consultation.title}
                 </h2>
-                <p className="text-blue-100 text-lg mb-10 leading-relaxed">
+                <p className="text-green-50 text-lg mb-10 leading-relaxed">
                   {t.consultation.desc}
                 </p>
                 
@@ -60,7 +60,7 @@ const Consultation: React.FC = () => {
                     href="https://wa.me/628567234922"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-darkGreen text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-green-500/50 hover:-translate-y-1 active:scale-95"
+                    className="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-white hover:text-brand-green text-white px-8 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-green-500/50 hover:-translate-y-1 active:scale-95"
                   >
                     <MessageCircle size={20} />
                     {t.consultation.cta_wa}
@@ -83,12 +83,12 @@ const Consultation: React.FC = () => {
                      <Check size={32} />
                    </div>
                    <h3 className="text-2xl font-bold text-white mb-2">Terima Kasih!</h3>
-                   <p className="text-blue-100">{t.consultation.form.success}</p>
+                   <p className="text-green-50">{t.consultation.form.success}</p>
                  </div>
                ) : (
                  <form onSubmit={handleSubmit} className="space-y-5">
                    <div>
-                     <label htmlFor="name" className="block text-sm font-medium text-blue-100 mb-1.5 ml-1">{t.consultation.form.name}</label>
+                     <label htmlFor="name" className="block text-sm font-medium text-green-50 mb-1.5 ml-1">{t.consultation.form.name}</label>
                      <input 
                        type="text" 
                        id="name"
@@ -96,13 +96,13 @@ const Consultation: React.FC = () => {
                        required
                        value={formState.name}
                        onChange={handleChange}
-                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:ring-offset-2 focus:ring-offset-blue-900 transition-all"
+                       className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:bg-white/20 transition-all"
                        placeholder="John Doe"
                      />
                    </div>
                    
                    <div>
-                     <label htmlFor="email" className="block text-sm font-medium text-blue-100 mb-1.5 ml-1">{t.consultation.form.email}</label>
+                     <label htmlFor="email" className="block text-sm font-medium text-green-50 mb-1.5 ml-1">{t.consultation.form.email}</label>
                      <input 
                        type="email" 
                        id="email"
@@ -110,13 +110,13 @@ const Consultation: React.FC = () => {
                        required
                        value={formState.email}
                        onChange={handleChange}
-                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:ring-offset-2 focus:ring-offset-blue-900 transition-all"
+                       className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:bg-white/20 transition-all"
                        placeholder="john@company.com"
                      />
                    </div>
 
                    <div>
-                     <label htmlFor="subject" className="block text-sm font-medium text-blue-100 mb-1.5 ml-1">{t.consultation.form.subject}</label>
+                     <label htmlFor="subject" className="block text-sm font-medium text-green-50 mb-1.5 ml-1">{t.consultation.form.subject}</label>
                      <input 
                        type="text" 
                        id="subject"
@@ -124,13 +124,13 @@ const Consultation: React.FC = () => {
                        required
                        value={formState.subject}
                        onChange={handleChange}
-                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:ring-offset-2 focus:ring-offset-blue-900 transition-all"
+                       className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:bg-white/20 transition-all"
                        placeholder="Demo Request"
                      />
                    </div>
 
                    <div>
-                     <label htmlFor="message" className="block text-sm font-medium text-blue-100 mb-1.5 ml-1">{t.consultation.form.message}</label>
+                     <label htmlFor="message" className="block text-sm font-medium text-green-50 mb-1.5 ml-1">{t.consultation.form.message}</label>
                      <textarea 
                        id="message"
                        name="message"
@@ -138,14 +138,14 @@ const Consultation: React.FC = () => {
                        rows={4}
                        value={formState.message}
                        onChange={handleChange}
-                       className="w-full px-4 py-3 rounded-xl bg-blue-950/40 border border-blue-700/50 text-white placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:ring-offset-2 focus:ring-offset-blue-900 transition-all resize-none"
+                       className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent focus:bg-white/20 transition-all resize-none"
                      ></textarea>
                    </div>
 
                    <button 
                      type="submit" 
                      disabled={isSubmitting}
-                     className="w-full bg-brand-green hover:bg-brand-darkGreen disabled:bg-gray-500 disabled:cursor-not-allowed text-white py-3.5 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-green-500/30 mt-2 flex items-center justify-center gap-2 active:scale-95"
+                     className="w-full bg-brand-green hover:bg-brand-fresh hover:text-brand-blue disabled:bg-gray-500 disabled:cursor-not-allowed text-white py-3.5 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-green-500/30 mt-2 flex items-center justify-center gap-2 active:scale-95"
                    >
                      {isSubmitting ? (
                        <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>

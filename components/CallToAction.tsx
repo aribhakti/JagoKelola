@@ -17,13 +17,13 @@ const CallToAction: React.FC = () => {
           
           {/* Text Content */}
           <div className="flex-1 text-center md:text-left">
-             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/20 text-brand-green border border-brand-green/30 text-sm font-semibold mb-6">
+             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/20 text-brand-fresh border border-brand-green/30 text-sm font-semibold mb-6">
                 <Smartphone size={16} /> Mobile App
              </div>
              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                {t.download.title}
              </h2>
-             <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-xl mx-auto md:mx-0">
+             <p className="text-green-50 text-lg md:text-xl mb-10 max-w-xl mx-auto md:mx-0">
                {t.download.desc}
              </p>
              
@@ -99,7 +99,7 @@ const CallToAction: React.FC = () => {
              </div>
              
              {/* Decorative blob behind phone */}
-             <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-[3.5rem] -z-10 blur-md opacity-40"></div>
+             <div className="absolute -inset-4 bg-gradient-to-tr from-brand-green to-teal-500 rounded-[3.5rem] -z-10 blur-md opacity-40"></div>
           </div>
 
         </div>
