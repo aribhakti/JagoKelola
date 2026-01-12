@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             <a href="#benefits" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.solutions}</a>
             <a href="#industries" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.industries}</a>
             <a href="#pricing" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.pricing}</a>
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center gap-4">
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full text-gray-500 dark:text-gray-400 active:scale-90"
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-gray-100 dark:border-slate-800 h-screen overflow-y-auto">
+        <div className="lg:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-gray-100 dark:border-slate-800 h-screen overflow-y-auto">
           <div className="px-4 pt-4 pb-20 space-y-2 sm:px-3">
             <a href="#benefits" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.nav.solutions}</a>
             <a href="#industries" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.nav.industries}</a>
