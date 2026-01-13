@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
             <img
               src="https://opdaipwvz67cprur.public.blob.vercel-storage.com/1.%20JAGO%20KELOLA%20LOGO%20-%20PRIMARY%20CONFIGURATION.png"
               alt="JagoKelola Logo"
-              className="h-16 w-auto object-contain group-hover:scale-105 transition-transform"
+              className="h-32 w-auto object-contain group-hover:scale-105 transition-transform"
             />
           </a>
 
@@ -28,6 +28,7 @@ const Navbar: React.FC = () => {
             <a href="#benefits" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.solutions}</a>
             <a href="#industries" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.industries}</a>
             <a href="#pricing" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.pricing}</a>
+            <a href="#blog" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.footer.blog}</a>
 
             <div className="h-6 w-px bg-gray-200 dark:bg-gray-700 mx-2"></div>
 
@@ -96,6 +97,7 @@ const Navbar: React.FC = () => {
             <a href="#benefits" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.nav.solutions}</a>
             <a href="#industries" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.nav.industries}</a>
             <a href="#pricing" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.nav.pricing}</a>
+            <a href="#blog" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.footer.blog}</a>
 
             <div className="flex items-center px-3 py-4 gap-3 mt-4">
               <span className="text-gray-500 dark:text-gray-400 text-sm">Language:</span>

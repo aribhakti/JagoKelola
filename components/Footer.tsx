@@ -46,9 +46,9 @@ const Footer: React.FC = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-2">
                 <img
-                  src="https://opdaipwvz67cprur.public.blob.vercel-storage.com/1.%20JAGO%20KELOLA%20LOGO%20-%20PRIMARY%20CONFIGURATION.png"
+                  src="https://opdaipwvz67cprur.public.blob.vercel-storage.com/1-2.%20JAGO%20KELOLA%20LOGO%20-%20PRIMARY%20CONFIGURATION%20INVERTED%20COLOR%20-%20WHITE.png"
                   alt="JagoKelola Logo"
-                  className="h-14 w-auto object-contain"
+                  className="h-32 w-auto object-contain"
                 />
               </div>
               <p className="text-gray-300 dark:text-gray-400 text-sm leading-relaxed">
@@ -208,24 +208,12 @@ const Footer: React.FC = () => {
               {/* Legal / Generic Text */}
               {isLegal && (
                 <div className="space-y-4">
-                  <p className="opacity-75">Last updated: {new Date().toLocaleDateString()}</p>
-                  <p>
-                    Welcome to JagoKelola. This is a standard template for {activeModal}.
-                    In a production environment, this would contain the full legal text regarding the use of our ERP/CRM/POS services.
+                  <p className="opacity-75">
+                    {activeModal === t.footer.privacy ? t.privacy_policy.last_updated : t.terms_conditions.last_updated}
                   </p>
-                  <h4 className="font-bold text-gray-900 dark:text-white mt-4">1. General Provisions</h4>
-                  <p>
-                    By accessing and using this platform, you agree to comply with the rules and regulations set forth by CBX.
-                    All data input into the system is secured and managed according to our data protection policies.
-                  </p>
-                  <h4 className="font-bold text-gray-900 dark:text-white mt-4">2. Usage Rights</h4>
-                  <p>
-                    Users are granted a non-exclusive, non-transferable license to use the software for business management purposes.
-                  </p>
-                  <h4 className="font-bold text-gray-900 dark:text-white mt-4">3. Contact</h4>
-                  <p>
-                    For any questions regarding this {activeModal}, please contact support@jagokelola.com.
-                  </p>
+                  <div className="text-gray-700 dark:text-gray-200 text-lg leading-relaxed space-y-4 whitespace-pre-line">
+                    {activeModal === t.footer.privacy ? t.privacy_policy.content : t.terms_conditions.content}
+                  </div>
                 </div>
               )}
             </div>
