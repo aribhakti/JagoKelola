@@ -6,8 +6,12 @@ const Pricing: React.FC = () => {
   const { t } = useAppContext();
 
   return (
-    <section id="pricing" className="py-16 lg:py-24 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="pricing" className="py-16 lg:py-24 bg-white dark:bg-slate-900 transition-colors duration-300 relative overflow-hidden">
+      
+      {/* Background Spotlight */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-brand-green/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-brand-green font-semibold tracking-wide uppercase text-sm mb-3">{t.pricing.subtitle}</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-brand-blue dark:text-white mb-4">

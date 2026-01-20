@@ -24,7 +24,7 @@ const LogoTicker: React.FC = () => {
           {t.trusted.label}
         </p>
       </div>
-
+      
       <div className="relative flex overflow-x-hidden group">
         <style>{`
           @keyframes marquee {
@@ -35,7 +35,7 @@ const LogoTicker: React.FC = () => {
             animation: marquee 25s linear infinite;
           }
         `}</style>
-
+        
         {/* Gradient Masks */}
         <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-slate-50 dark:from-slate-950 to-transparent z-10"></div>
         <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-slate-50 dark:from-slate-950 to-transparent z-10"></div>
@@ -44,9 +44,9 @@ const LogoTicker: React.FC = () => {
           {/* First set of logos - Accessible */}
           <div className="flex gap-16 mx-8 items-center">
             {logos.map((logo, idx) => (
-              <span
-                key={idx}
-                className={`text-5xl md:text-6xl text-gray-400 dark:text-gray-600 font-bold ${logo.font} grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default`}
+              <span 
+                key={idx} 
+                className={`text-xl md:text-2xl text-gray-400 dark:text-gray-600 font-bold ${logo.font} grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default`}
               >
                 {logo.name}
               </span>
@@ -55,10 +55,10 @@ const LogoTicker: React.FC = () => {
 
           {/* Second set of logos for seamless loop - Hidden from Screen Readers */}
           <div className="flex gap-16 mx-8 items-center" aria-hidden="true">
-            {logos.map((logo, idx) => (
-              <span
-                key={`dup-${idx}`}
-                className={`text-5xl md:text-6xl text-gray-400 dark:text-gray-600 font-bold ${logo.font} grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default`}
+             {logos.map((logo, idx) => (
+              <span 
+                key={`dup-${idx}`} 
+                className={`text-xl md:text-2xl text-gray-400 dark:text-gray-600 font-bold ${logo.font} grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default`}
               >
                 {logo.name}
               </span>

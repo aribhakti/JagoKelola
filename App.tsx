@@ -11,13 +11,15 @@ const PainPoints = React.lazy(() => import('./components/PainPoints'));
 const Industries = React.lazy(() => import('./components/Industries'));
 const Features = React.lazy(() => import('./components/Features'));
 const InteractiveDashboard = React.lazy(() => import('./components/InteractiveDashboard'));
+// const Integrations = React.lazy(() => import('./components/Integrations')); // Hidden
 const HowItWorks = React.lazy(() => import('./components/HowItWorks'));
+// const Testimonials = React.lazy(() => import('./components/Testimonials')); // Hidden
 const Pricing = React.lazy(() => import('./components/Pricing'));
+// const CallToAction = React.lazy(() => import('./components/CallToAction')); // Hidden
 const FAQ = React.lazy(() => import('./components/FAQ'));
 const Consultation = React.lazy(() => import('./components/Consultation'));
 const Footer = React.lazy(() => import('./components/Footer'));
 const LogoTicker = React.lazy(() => import('./components/LogoTicker'));
-const Blog = React.lazy(() => import('./components/Blog'));
 const BackToTop = React.lazy(() => import('./components/BackToTop'));
 
 const App: React.FC = () => {
@@ -28,7 +30,7 @@ const App: React.FC = () => {
         <main>
           {/* Hero is critical, load immediately */}
           <Hero />
-
+          
           {/* Lazy load the rest */}
           <Suspense fallback={<Loading />}>
             <LogoTicker />
@@ -36,19 +38,21 @@ const App: React.FC = () => {
             <Industries />
             <Features />
             <InteractiveDashboard />
+            {/* <Integrations /> Hidden */}
             <HowItWorks />
+            {/* <Testimonials /> Hidden */}
             <Pricing />
+            {/* <CallToAction /> Hidden */}
             <FAQ />
-            <Blog />
             <Consultation />
           </Suspense>
         </main>
-
+        
         <Suspense fallback={null}>
           <Footer />
           <BackToTop />
         </Suspense>
-
+        
         <FloatingWhatsApp />
         <CookieConsent />
       </div>

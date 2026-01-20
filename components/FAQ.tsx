@@ -11,11 +11,20 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-brand-green/5 dark:bg-slate-950 transition-colors duration-300 relative overflow-hidden">
+      
+      {/* Background Decor */}
+      <div className="absolute -left-10 top-20 text-brand-green/5 rotate-[-15deg] animate-float">
+         <HelpCircle size={200} />
+      </div>
+      <div className="absolute -right-10 bottom-20 text-brand-green/5 rotate-[15deg] animate-float" style={{ animationDelay: '2s' }}>
+         <HelpCircle size={150} />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center p-3 bg-brand-green/10 text-brand-green rounded-xl mb-4">
+          <div className="inline-flex items-center justify-center p-3 bg-white dark:bg-slate-800 text-brand-green rounded-xl mb-4 shadow-sm border border-brand-green/10">
              <HelpCircle size={24} />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-brand-blue dark:text-white mb-4">
@@ -30,7 +39,7 @@ const FAQ: React.FC = () => {
           {t.faq.items.map((item: any, idx: number) => (
             <div 
               key={idx}
-              className="bg-white dark:bg-slate-900 rounded-xl border border-gray-100 dark:border-slate-800 overflow-hidden transition-all duration-300 hover:border-brand-green/30"
+              className="bg-white dark:bg-slate-900 rounded-xl border border-gray-100 dark:border-slate-800 overflow-hidden transition-all duration-300 hover:border-brand-green/30 hover:shadow-md"
             >
               <button
                 onClick={() => toggleIndex(idx)}

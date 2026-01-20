@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, MoreHorizontal, TrendingUp, Users, DollarSign, Package, Bell, AlertTriangle } from 'lucide-react';
+import { CheckCircle2, MoreHorizontal, TrendingUp, DollarSign, Bell, AlertTriangle } from 'lucide-react';
 import { useAppContext } from '../ThemeContext';
 
 const InteractiveDashboard: React.FC = () => {
@@ -12,8 +12,12 @@ const InteractiveDashboard: React.FC = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-white dark:bg-slate-900 overflow-hidden transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-white to-green-50 dark:from-slate-900 dark:to-slate-800 overflow-hidden transition-colors duration-300 relative">
+      
+      {/* Background Shine */}
+      <div className="absolute top-1/2 left-0 w-[800px] h-[800px] bg-brand-green/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Visual Side - Mock Dashboard UI */}

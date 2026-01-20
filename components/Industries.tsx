@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, ShoppingBag, Shirt, Store, UtensilsCrossed, Tag, Truck, Briefcase, ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { ShoppingBag, Store, UtensilsCrossed, Tag, Truck, Briefcase, ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { useAppContext } from '../ThemeContext';
 
 const Industries: React.FC = () => {
@@ -17,14 +17,15 @@ const Industries: React.FC = () => {
   return (
     <section id="industries" className="py-16 lg:py-24 bg-brand-blue dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
       
-      {/* Background Ambience */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-green/20 rounded-full blur-[120px] mix-blend-screen"></div>
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px] mix-blend-screen"></div>
+      {/* Dynamic Background Ambience */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-green/20 rounded-full blur-[120px] mix-blend-screen animate-blob"></div>
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px] mix-blend-screen animate-blob" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/2 right-1/2 w-[300px] h-[300px] bg-blue-500/20 rounded-full blur-[100px] mix-blend-screen animate-blob" style={{ animationDelay: '2s' }}></div>
       </div>
       
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-30"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

@@ -8,8 +8,13 @@ const HowItWorks: React.FC = () => {
   const icons = [UserPlus, Settings, TrendingUp];
 
   return (
-    <section className="py-16 lg:py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 lg:py-24 bg-white dark:bg-slate-900 transition-colors duration-300 relative overflow-hidden">
+      
+      {/* Background Decor */}
+      <div className="absolute left-0 top-1/4 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl"></div>
+      <div className="absolute right-0 bottom-1/4 w-40 h-40 bg-green-500/5 rounded-full blur-2xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
@@ -34,7 +39,7 @@ const HowItWorks: React.FC = () => {
             const Icon = icons[idx];
             return (
               <div key={idx} className="relative z-10 flex flex-col items-center text-center group">
-                <div className="w-24 h-24 bg-white dark:bg-slate-800 rounded-full border-4 border-gray-100 dark:border-slate-700 flex items-center justify-center mb-8 shadow-sm group-hover:border-brand-green group-hover:scale-110 transition-all duration-300">
+                <div className="w-24 h-24 bg-slate-50 dark:bg-slate-800 rounded-full border-4 border-gray-100 dark:border-slate-700 flex items-center justify-center mb-8 shadow-sm group-hover:border-brand-green group-hover:scale-110 transition-all duration-300">
                   <div className="w-16 h-16 bg-blue-50 dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-blue dark:text-blue-300 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
                     <Icon size={32} />
                   </div>

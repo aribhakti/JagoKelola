@@ -6,7 +6,7 @@ const CallToAction: React.FC = () => {
   const { t } = useAppContext();
 
   return (
-    <section className="py-24 bg-brand-blue dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
+    <section id="download" className="py-24 bg-brand-blue dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
       
       {/* Background Shapes */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-green/20 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>

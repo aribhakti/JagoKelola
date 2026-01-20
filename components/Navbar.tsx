@@ -15,34 +15,33 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <a href="#" onClick={() => window.scrollTo(0, 0)} className="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
-            <img
-              src="https://opdaipwvz67cprur.public.blob.vercel-storage.com/1.%20JAGO%20KELOLA%20LOGO%20-%20PRIMARY%20CONFIGURATION.png"
-              alt="JagoKelola Logo"
-              className="h-32 w-auto object-contain group-hover:scale-105 transition-transform"
+          <a href="#" onClick={() => window.scrollTo(0,0)} className="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+            <img 
+              src="https://opdaipwvz67cprur.public.blob.vercel-storage.com/Jago%20Kelola.png" 
+              alt="JagoKelola" 
+              className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             <a href="#benefits" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.solutions}</a>
             <a href="#industries" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.industries}</a>
             <a href="#pricing" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.nav.pricing}</a>
-            <a href="#blog" className="text-gray-600 dark:text-gray-300 hover:text-brand-green dark:hover:text-brand-green font-medium transition-colors">{t.footer.blog}</a>
-
+            
             <div className="h-6 w-px bg-gray-200 dark:bg-gray-700 mx-2"></div>
 
             {/* Switchers */}
             <div className="flex items-center gap-2">
-              <button
+              <button 
                 onClick={toggleTheme}
                 className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors active:scale-90"
                 aria-label="Toggle Theme"
               >
                 {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
               </button>
-
-              <button
+              
+              <button 
                 onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
                 className="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1 font-semibold text-sm active:scale-90"
                 aria-label="Toggle Language"
@@ -53,15 +52,15 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-4 ml-2">
-              <a
-                href="https://erp.cubix.co.id/login"
+              <a 
+                href="https://erp.cubix.co.id/login" 
                 className="text-brand-blue dark:text-white font-semibold hover:opacity-80 transition-colors"
                 rel="noopener noreferrer"
               >
                 {t.nav.login}
               </a>
-              <a
-                href="https://erp.cubix.co.id/login"
+              <a 
+                href="https://erp.cubix.co.id/login" 
                 className="bg-brand-green hover:bg-brand-darkGreen text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-brand-green/20 active:scale-95"
                 rel="noopener noreferrer"
               >
@@ -71,16 +70,16 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center gap-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full text-gray-500 dark:text-gray-400 active:scale-90"
-              aria-label="Toggle Theme"
-            >
-              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          <div className="md:hidden flex items-center gap-4">
+            <button 
+                onClick={toggleTheme}
+                className="p-2 rounded-full text-gray-500 dark:text-gray-400 active:scale-90"
+                aria-label="Toggle Theme"
+              >
+                {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
+            <button 
+              onClick={() => setIsOpen(!isOpen)} 
               className="text-gray-600 dark:text-white hover:text-brand-blue active:scale-90"
               aria-label="Menu"
             >
@@ -92,16 +91,15 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-gray-100 dark:border-slate-800 h-screen overflow-y-auto">
+        <div className="md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-gray-100 dark:border-slate-800 h-screen overflow-y-auto">
           <div className="px-4 pt-4 pb-20 space-y-2 sm:px-3">
             <a href="#benefits" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.nav.solutions}</a>
             <a href="#industries" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.nav.industries}</a>
             <a href="#pricing" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.nav.pricing}</a>
-            <a href="#blog" onClick={handleLinkClick} className="block px-3 py-3 text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brand-green border-b border-gray-50 dark:border-slate-800">{t.footer.blog}</a>
-
+            
             <div className="flex items-center px-3 py-4 gap-3 mt-4">
-              <span className="text-gray-500 dark:text-gray-400 text-sm">Language:</span>
-              <button
+               <span className="text-gray-500 dark:text-gray-400 text-sm">Language:</span>
+               <button 
                 onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
                 className="font-bold text-brand-blue dark:text-brand-green"
               >
@@ -110,16 +108,16 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className="pt-4 flex flex-col gap-4 px-3">
-              <a
-                href="https://erp.cubix.co.id/login"
+              <a 
+                href="https://erp.cubix.co.id/login" 
                 onClick={handleLinkClick}
                 className="w-full text-center py-3 text-brand-blue dark:text-white font-semibold text-lg"
                 rel="noopener noreferrer"
               >
                 {t.nav.login}
               </a>
-              <a
-                href="https://erp.cubix.co.id/login"
+              <a 
+                href="https://erp.cubix.co.id/login" 
                 onClick={handleLinkClick}
                 className="w-full block text-center bg-brand-green text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-brand-green/20 active:scale-95 transition-transform"
                 rel="noopener noreferrer"

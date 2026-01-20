@@ -10,7 +10,12 @@ const Features: React.FC = () => {
   const categories = t.features.categories;
 
   return (
-    <section id="features" className="py-16 lg:py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300">
+    <section id="features" className="py-16 lg:py-24 bg-white dark:bg-slate-900 relative transition-colors duration-300 overflow-hidden">
+      
+      {/* Background Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-slate-900"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
@@ -35,7 +40,7 @@ const Features: React.FC = () => {
               className={`px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                 activeCategory === index
                   ? 'bg-brand-green text-white shadow-lg shadow-green-500/30 scale-105'
-                  : 'bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700 active:scale-95'
+                  : 'bg-slate-50 dark:bg-slate-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700 active:scale-95 border border-gray-100 dark:border-slate-700'
               }`}
             >
               {category.label}
@@ -46,7 +51,7 @@ const Features: React.FC = () => {
         {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in key={activeCategory}">
           {categories[activeCategory].items.map((feature: any) => {
-            const Icon = FEATURE_ICONS[feature.id] || FEATURE_ICONS['settings']; // Fallback icon
+            const Icon = FEATURE_ICONS[feature.id] || FEATURE_ICONS['settings']; 
             
             return (
               <div 
